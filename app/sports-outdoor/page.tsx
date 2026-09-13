@@ -1,0 +1,144 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import CategoryPage from "@/components/CategoryPage";
+import {
+  BoxesIcon,
+  GlobeIcon,
+  ShieldCheckIcon,
+  TagIcon,
+} from "@/components/icons";
+
+export const metadata: Metadata = {
+  title: "Wholesale Sports & Outdoor Products Supplier",
+  description:
+    "Genuine branded climbing, hiking and outdoor equipment in wholesale quantities. Petzl, Thule, LEKI, KASK, La Sportiva and more for e-commerce sellers and retailers.",
+  alternates: { canonical: "/sports-outdoor" },
+  openGraph: {
+    title: "Wholesale Sports & Outdoor Products Supplier | Hyprr Retail",
+    description:
+      "Genuine branded climbing, hiking and outdoor equipment in wholesale quantities for e-commerce sellers and retailers.",
+  },
+};
+
+export default function SportsOutdoorPage() {
+  return (
+    <CategoryPage
+      slug="sports-outdoor"
+      name="Sports & Outdoor"
+      eyebrow="Outdoor brands. Commercial supply."
+      heroTitle="Sports & Outdoor"
+      heroCopy="Equipment people trust outdoors. We supply genuine branded climbing, hiking and outdoor products — from trekking poles to helmets to backpacks — to e-commerce sellers, retailers and wholesale buyers."
+      heroImage="https://images.unsplash.com/photo-1501554728187-ce583db33af7?w=1200&q=80&auto=format&fit=crop"
+      heroImageAlt="Hiker with trekking gear overlooking a mountain lake"
+      chips={[
+        { icon: ShieldCheckIcon, label: "Genuine products" },
+        { icon: TagIcon, label: "Competitive pricing" },
+        { icon: BoxesIcon, label: "Wide range & availability" },
+        { icon: GlobeIcon, label: "Global shipping" },
+      ]}
+      productCategories={[
+        {
+          title: "Climbing Equipment",
+          image:
+            "https://images.unsplash.com/photo-1522163182402-834f871fd851?w=800&q=80&auto=format&fit=crop",
+          alt: "Climbing rope and carabiners prepared for a climb",
+        },
+        {
+          title: "Hiking & Trekking",
+          image:
+            "https://images.unsplash.com/photo-1533240332313-0db49b459ad6?w=800&q=80&auto=format&fit=crop",
+          alt: "Hiker on a mountain trail with trekking equipment",
+        },
+        {
+          title: "Packs & Bags",
+          image:
+            "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&q=80&auto=format&fit=crop",
+          alt: "Black technical backpack photographed against a plain background",
+        },
+        {
+          title: "Footwear & Helmets",
+          image:
+            "https://images.unsplash.com/photo-1520639888713-7851133b1ed0?w=800&q=80&auto=format&fit=crop",
+          alt: "Hiking boots on rocky mountain terrain",
+        },
+      ]}
+      splitTitle="Gear your customers already trust."
+      splitCopy="Outdoor buyers know the brands they want. We help retailers and e-commerce sellers stock genuine Petzl, Thule, LEKI, KASK, La Sportiva and other respected outdoor names — with wholesale terms, documentation and shipping that fit commercial orders."
+      splitChecklist={[
+        "Authentic branded products",
+        "Wholesale quantities",
+        "Commercial documentation",
+        "Global fulfillment",
+        "Support for e-commerce sellers",
+      ]}
+      splitImage="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80&auto=format&fit=crop"
+      splitImageAlt="Snow-capped mountain range under a clear sky"
+      seoTitle="A wholesale outdoor equipment supplier for retailers and sellers"
+      seoContent={
+        <>
+          <p>
+            Hyprr Retail supplies wholesale outdoor products to commercial
+            buyers in the United States, the United Kingdom and international
+            markets. The range spans climbing equipment, hiking and trekking
+            gear, outdoor safety equipment, backpacks and bags, outdoor
+            footwear and accessories — all genuine branded products obtained
+            through established commercial distribution channels.
+          </p>
+          <p>
+            Our current Sports & Outdoor brands include Petzl, Thule, LEKI, La
+            Sportiva, KASK, Scarpa, Garsport, Edelrid, CAMP, Kong Italy,
+            Fitwell and Victronix. These are names outdoor customers actively
+            search for, which makes them strong wholesale inventory for
+            e-commerce sellers, specialist retailers and outdoor stores
+            building a branded assortment.
+          </p>
+          <p>
+            As with our tools range, we don&apos;t invent availability or
+            publish speculative pricing. You request the catalog, identify the
+            brands and models you want, and we confirm real availability,
+            minimum order quantities and wholesale pricing before anything is
+            committed. Orders ship by air, express, sea or container freight
+            depending on size and destination, with commercial documentation
+            as applicable. See the full process on{" "}
+            <Link href="/how-it-works" className="font-medium underline underline-offset-4">
+              How It Works
+            </Link>{" "}
+            or browse the complete list on our{" "}
+            <Link href="/brands" className="font-medium underline underline-offset-4">
+              Brands page
+            </Link>
+            .
+          </p>
+        </>
+      }
+      faqs={[
+        {
+          question:
+            "Which outdoor brands can I buy wholesale from Hyprr Retail?",
+          answer:
+            "Our current Sports & Outdoor range includes Petzl, Thule, LEKI, La Sportiva, KASK, Scarpa, Garsport, Edelrid, CAMP, Kong Italy, Fitwell and Victronix, with more brands added over time. If you need a brand not listed, ask in your catalog request.",
+        },
+        {
+          question: "Do you supply climbing and safety equipment wholesale?",
+          answer:
+            "Yes. We supply genuine climbing hardware, harnesses, helmets, ropes and related safety equipment from brands such as Petzl, Edelrid, CAMP, Kong Italy and KASK. All products are genuine and sourced through established commercial channels.",
+        },
+        {
+          question: "Can e-commerce sellers buy outdoor gear wholesale?",
+          answer:
+            "Yes. E-commerce sellers, including Amazon and Walmart marketplace sellers, are our primary customers. We provide wholesale quantities, commercial invoices and shipping documentation, plus marketplace documentation support where applicable — with no guarantee of marketplace approval, which always rests with the marketplace.",
+        },
+        {
+          question: "What is the minimum order for outdoor products?",
+          answer:
+            "Minimum order quantities vary by brand, product and order. We confirm the applicable MOQ for your selected models before the purchase order is issued.",
+        },
+        {
+          question: "How is wholesale outdoor equipment shipped?",
+          answer:
+            "Options include air freight, express, sea freight and full or partial containers, depending on order size, destination and timing. Shipping method, cost and timing are confirmed with you before the order is finalized.",
+        },
+      ]}
+    />
+  );
+}
