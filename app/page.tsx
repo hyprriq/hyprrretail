@@ -403,7 +403,7 @@ export default function HomePage() {
                 className="h-6 w-auto translate-y-1"
               />
               <Image
-                src="/brands/walmart.svg"
+                src="/brands/walmart-spark.svg"
                 alt="Walmart"
                 width={130}
                 height={28}
