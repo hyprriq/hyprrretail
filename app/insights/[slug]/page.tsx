@@ -72,7 +72,15 @@ export default async function InsightPage({
           author: { "@type": "Organization", name: post.author || SITE_NAME },
           publisher: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
           mainEntityOfPage: `${SITE_URL}/insights/${post.slug}`,
-          ...(post.heroImage?.url ? { image: [post.heroImage.url] } : {}),
+          ...(post.heroImage?.url
+            ? {
+                image: [
+                  post.heroImage.url.startsWith("/")
+                    ? `${SITE_URL}${post.heroImage.url}`
+                    : post.heroImage.url,
+                ],
+              }
+            : {}),
         }}
       />
 

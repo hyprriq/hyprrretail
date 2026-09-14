@@ -1,4 +1,5 @@
 import type { PortableTextBlock } from "@portabletext/react";
+import { SITE_URL } from "@/lib/site";
 
 /** Sanity "Hyprr Retail" project — public dataset, read via the API CDN. */
 const PROJECT_ID = "1o0ajwrq";
@@ -56,14 +57,34 @@ const CARD_PROJECTION = `{
   author,
   publishedAt,
   updatedAt,
-  "heroImage": {"url": heroImage.asset->url, "alt": heroImage.alt}
+  "heroImage": {
+    "url": coalesce(heroImage.asset->url, heroUrl),
+    "alt": coalesce(heroImage.alt, heroAlt)
+  }
 }`;
+
+/**
+ * Hero images may be Sanity-hosted uploads or fallback URLs pointing at our
+ * own /images assets. Serve the latter as relative paths so next/image treats
+ * them as local files instead of remote fetches against our own origin.
+ */
+function normalizeHero<T extends InsightCard>(item: T): T {
+  const url = item.heroImage?.url;
+  if (url?.startsWith(`${SITE_URL}/`)) {
+    return {
+      ...item,
+      heroImage: { ...item.heroImage, url: url.slice(SITE_URL.length) },
+    };
+  }
+  return item;
+}
 
 export async function getInsights(): Promise<InsightCard[]> {
   try {
-    return await sanityFetch<InsightCard[]>(
+    const items = await sanityFetch<InsightCard[]>(
       `*[_type == "post" && defined(slug.current)] | order(publishedAt desc) ${CARD_PROJECTION}`
     );
+    return items.map(normalizeHero);
   } catch {
     return [];
   }
@@ -71,7 +92,7 @@ export async function getInsights(): Promise<InsightCard[]> {
 
 export async function getInsight(slug: string): Promise<Insight | null> {
   try {
-    return await sanityFetch<Insight | null>(
+    const item = await sanityFetch<Insight | null>(
       `*[_type == "post" && slug.current == $slug][0] {
         ...${CARD_PROJECTION},
         seoTitle,
@@ -82,6 +103,7 @@ export async function getInsight(slug: string): Promise<Insight | null> {
       }`,
       { slug }
     );
+    return item ? normalizeHero(item) : null;
   } catch {
     return null;
   }
