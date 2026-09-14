@@ -18,11 +18,11 @@ export default function CtaBand({
           </h2>
           <p className="mt-1.5 text-sm text-white/70">{subtitle}</p>
         </div>
-        <div className="flex flex-wrap items-center gap-3">
-          <RequestCatalogButton />
+        <div className="flex flex-wrap items-center gap-4">
+          <RequestCatalogButton variant="primary-lg" />
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 rounded-md border border-white/25 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:border-white/60"
+            className="inline-flex items-center gap-2 rounded-md border-[1.5px] border-white px-7 py-3.5 text-sm font-extrabold text-white transition-colors hover:bg-white/10"
           >
             Contact Us
             <ArrowRightIcon className="h-4 w-4" />

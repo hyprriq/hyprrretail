@@ -27,9 +27,10 @@ export default function ToolsHardwarePage() {
       name="Tools & Hardware"
       eyebrow="Professional tools. Real business."
       heroTitle="Tools & Hardware"
-      heroCopy="Trusted brands for demanding businesses. We supply genuine branded power tools, hand tools, accessories and hardware to e-commerce sellers, retailers and wholesale buyers."
-      heroImage="https://images.unsplash.com/photo-1504148455328-c376907d081c?w=1200&q=80&auto=format&fit=crop"
-      heroImageAlt="Professional cordless drill resting on a wooden workbench"
+      heroTagline="Trusted brands for demanding businesses."
+      heroCopy="We supply genuine branded power tools, hand tools, accessories and hardware to e-commerce sellers, retailers and wholesale buyers."
+      heroImage="/images/hero-tools.png"
+      heroImageAlt="Milwaukee professional drill in use on site"
       chips={[
         { icon: ShieldCheckIcon, label: "Genuine products" },
         { icon: TagIcon, label: "Competitive pricing" },
@@ -39,27 +40,23 @@ export default function ToolsHardwarePage() {
       productCategories={[
         {
           title: "Power Tools",
-          image:
-            "https://images.unsplash.com/photo-1540104539488-92a51bbc0410?w=800&q=80&auto=format&fit=crop",
-          alt: "Cordless drill with drill bits laid out on a workbench",
+          image: "/images/cat-power.png",
+          alt: "Professional cordless power drill",
         },
         {
           title: "Hand Tools",
-          image:
-            "https://images.unsplash.com/photo-1567361808960-dec9cb578182?w=800&q=80&auto=format&fit=crop",
-          alt: "Hammer, pliers and screwdrivers arranged on a wooden surface",
+          image: "/images/cat-hand.png",
+          alt: "Set of professional wrenches",
         },
         {
           title: "Accessories",
-          image:
-            "https://images.unsplash.com/photo-1581147036324-c17ac41dfa6c?w=800&q=80&auto=format&fit=crop",
-          alt: "Drawer filled with assorted tools and accessories",
+          image: "/images/cat-acc.png",
+          alt: "Abrasive discs and tool accessories",
         },
         {
           title: "Hardware & Fixings",
-          image:
-            "https://images.unsplash.com/photo-1587582423116-ec07293f0395?w=800&q=80&auto=format&fit=crop",
-          alt: "Construction worker fastening timber framing on site",
+          image: "/images/cat-hw.png",
+          alt: "Screws and fixings hardware",
         },
       ]}
       splitTitle="Built for businesses that build more."
@@ -71,8 +68,8 @@ export default function ToolsHardwarePage() {
         "Global fulfillment",
         "Support for e-commerce sellers",
       ]}
-      splitImage="https://images.unsplash.com/photo-1505798577917-a65157d3320a?w=800&q=80&auto=format&fit=crop"
-      splitImageAlt="Tradesperson cutting timber with a miter saw on site"
+      splitImage="/images/cases.png"
+      splitImageAlt="Stack of red Milwaukee Packout tool cases"
       seoTitle="A wholesale tool supplier built for commercial buyers"
       seoContent={
         <>

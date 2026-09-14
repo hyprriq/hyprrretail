@@ -17,11 +17,14 @@ export default function Logo({
       aria-label="Hyprr Retail — home"
       className={`inline-flex flex-col leading-none ${className}`}
     >
-      <span className="text-[1.55rem] font-extrabold tracking-tight text-ink">
-        hyprr<span className="text-brand-red">r</span>etail
+      <span className="text-[1.7rem] tracking-[-0.02em]">
+        <span className="font-extrabold text-ink">
+          hypr<span className="text-brand-red">r</span>
+        </span>
+        <span className="font-normal text-[#7a7e8a]">retail</span>
       </span>
       {withTagline && (
-        <span className="mt-1 text-[0.55rem] font-semibold uppercase tracking-[0.22em] text-muted">
+        <span className="mt-1.5 text-[0.53rem] font-semibold uppercase tracking-[0.14em] text-faint">
           Global brands. Real opportunities.
         </span>
       )}

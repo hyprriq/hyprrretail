@@ -27,7 +27,8 @@ export default function SportsOutdoorPage() {
       name="Sports & Outdoor"
       eyebrow="Outdoor brands. Commercial supply."
       heroTitle="Sports & Outdoor"
-      heroCopy="Equipment people trust outdoors. We supply genuine branded climbing, hiking and outdoor products — from trekking poles to helmets to backpacks — to e-commerce sellers, retailers and wholesale buyers."
+      heroTagline="Equipment people trust outdoors."
+      heroCopy="We supply genuine branded climbing, hiking and outdoor products — from trekking poles to helmets to backpacks — to e-commerce sellers, retailers and wholesale buyers."
       heroImage="https://images.unsplash.com/photo-1501554728187-ce583db33af7?w=1200&q=80&auto=format&fit=crop"
       heroImageAlt="Hiker with trekking gear overlooking a mountain lake"
       chips={[

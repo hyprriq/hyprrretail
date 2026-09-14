@@ -11,6 +11,7 @@ const variants = {
     "inline-flex items-center justify-center gap-2 rounded-md bg-amber px-7 py-3.5 text-base font-bold text-ink transition-colors hover:bg-amber-hover",
   outline:
     "inline-flex items-center justify-center gap-2 rounded-md border border-line bg-white px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:border-ink",
+  dark: "inline-flex items-center justify-center gap-2 rounded-md bg-dark px-5 py-3 text-xs font-bold text-white transition-colors hover:bg-black",
   "outline-dark":
     "inline-flex items-center justify-center gap-2 rounded-md border border-white/25 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:border-white/60",
   ghost:

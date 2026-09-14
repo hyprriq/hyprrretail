@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import Logo from "./Logo";
 import RequestCatalogButton from "./catalog/RequestCatalogButton";
 import { CATEGORY_LINKS, MAIN_NAV } from "@/lib/site";
-import { ChevronDownIcon, CloseIcon, MenuIcon } from "./icons";
+import { ChevronDownIcon, CloseIcon, MenuIcon, SearchIcon } from "./icons";
 
 export default function Header() {
   const pathname = usePathname();
@@ -89,7 +89,14 @@ export default function Header() {
           )}
         </nav>
 
-        <div className="hidden lg:block">
+        <div className="hidden items-center gap-5 lg:flex">
+          <Link
+            href="/brands"
+            aria-label="Browse all brands"
+            className="text-ink transition-colors hover:text-muted"
+          >
+            <SearchIcon className="h-5 w-5" />
+          </Link>
           <RequestCatalogButton />
         </div>
 

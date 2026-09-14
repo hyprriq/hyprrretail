@@ -115,64 +115,63 @@ export default function HomePage() {
         }}
       />
 
-      {/* Hero */}
-      <section className="border-b border-line bg-surface">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-4 pb-10 pt-12 sm:px-6 lg:grid-cols-2 lg:gap-14 lg:px-8 lg:pt-16">
-          <div>
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-muted">
+      {/* Hero — approved board composition: copy left, commercial scene right */}
+      <section className="relative overflow-hidden bg-surface">
+        <div className="pointer-events-none absolute inset-y-0 right-0 hidden lg:block">
+          <Image
+            src="/images/hero-home.png"
+            alt="Outdoor adventurer with a Thule backpack beside Milwaukee tools, a helmet and hiking gear in the mountains"
+            width={610}
+            height={488}
+            priority
+            className="h-full w-auto object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/60 to-transparent lg:w-40" />
+        </div>
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-2xl py-10 lg:py-14">
+            <p className="text-[0.68rem] font-bold uppercase tracking-[0.14em] text-muted">
               Genuine brands. Global supply.
             </p>
-            <h1 className="mt-4 text-4xl font-extrabold leading-[1.08] tracking-tight text-ink sm:text-5xl lg:text-[3.4rem]">
-              Wholesale products for e-commerce sellers and retailers.
+            <h1 className="mt-3 text-4xl font-extrabold leading-[1.04] tracking-[-0.025em] sm:text-5xl">
+              <span className="text-soft">Wholesale products</span>
+              <br />
+              for e-commerce
+              <br />
+              sellers and retailers.
             </h1>
-            <p className="mt-5 max-w-lg text-base leading-relaxed text-body sm:text-lg">
+            <p className="mt-4 max-w-lg text-[0.95rem] font-medium leading-relaxed text-body">
               Genuine branded tools, hardware and outdoor products supplied
-              through established commercial distribution channels — with clear
-              MOQ, documentation and shipping options for wholesale buyers.
+              through established commercial distribution channels.
             </p>
-            <div className="mt-7 flex flex-wrap items-center gap-3">
+            <div className="mt-6 flex flex-wrap items-center gap-3">
               <RequestCatalogButton variant="primary-lg" />
               <Link
                 href="/brands"
-                className="inline-flex items-center justify-center gap-2 rounded-md border border-line bg-white px-7 py-3.5 text-base font-semibold text-ink transition-colors hover:border-ink"
+                className="inline-flex items-center justify-center gap-2 rounded-md border-[1.5px] border-ink bg-white px-6 py-3 text-sm font-extrabold text-ink transition-colors hover:bg-surface"
               >
                 View Our Brands
                 <ArrowRightIcon className="h-4 w-4" />
               </Link>
             </div>
           </div>
-          <div className="relative mb-6">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-card lg:aspect-[5/4]">
-              <Image
-                src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=1200&q=80&auto=format&fit=crop"
-                alt="Hikers with large backpacks and trekking gear crossing a mountain trail"
-                fill
-                priority
-                sizes="(min-width: 1024px) 50vw, 100vw"
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-black/10" />
-              <p className="absolute right-5 top-5 max-w-[11rem] text-right text-sm font-semibold italic leading-snug text-white [text-shadow:0_1px_10px_rgba(0,0,0,0.55)]">
-                Tools for today.
-                <br />
-                Adventures for tomorrow.
-              </p>
-            </div>
-            {/* Overlapping product frame ties professional tools into the outdoor scene. */}
-            <div className="absolute -bottom-6 left-5 w-[40%] max-w-[230px] overflow-hidden rounded-card shadow-xl ring-4 ring-white">
-              <div className="relative aspect-[4/3]">
-                <Image
-                  src="https://images.unsplash.com/photo-1581147036324-c17ac41dfa6c?w=600&q=80&auto=format&fit=crop"
-                  alt="Drawer of professional tools ready for the job"
-                  fill
-                  sizes="230px"
-                  className="object-cover"
-                />
-              </div>
-            </div>
+          {/* Mobile hero image */}
+          <div className="relative -mx-4 aspect-[5/4] sm:-mx-6 lg:hidden">
+            <Image
+              src="/images/hero-home.png"
+              alt=""
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover"
+            />
           </div>
         </div>
-        <div className="mx-auto max-w-7xl px-4 pb-8 sm:px-6 lg:px-8">
+      </section>
+
+      {/* Trust strip */}
+      <div className="border-b border-line bg-white">
+        <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
           <TrustChips
             chips={[
               { icon: ShieldCheckIcon, label: "Genuine Products" },
@@ -182,159 +181,146 @@ export default function HomePage() {
             ]}
           />
         </div>
-      </section>
+      </div>
 
       {/* Featured brands */}
-      <section aria-labelledby="featured-brands" className="bg-white">
-        <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between gap-4">
-            <h2
-              id="featured-brands"
-              className="text-lg font-bold tracking-tight text-ink"
-            >
-              Featured brands
-            </h2>
+      <section
+        aria-labelledby="featured-brands"
+        className="border-b border-line bg-white"
+      >
+        <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+          <h2
+            id="featured-brands"
+            className="text-xl font-semibold text-soft"
+          >
+            Featured brands
+          </h2>
+          <div className="mt-4 flex flex-wrap items-center justify-between gap-6">
+            <ul className="flex flex-wrap items-center gap-x-10 gap-y-5">
+              {featuredBrands().map((brand) => (
+                <li key={brand.slug}>
+                  <BrandMark brand={brand} />
+                </li>
+              ))}
+            </ul>
             <Link
               href="/brands"
-              className="inline-flex items-center gap-1.5 text-sm font-semibold text-ink underline-offset-4 hover:underline"
+              className="text-xs font-bold text-ink underline-offset-4 hover:underline"
             >
-              View all brands
-              <ArrowRightIcon className="h-4 w-4" />
+              View all brands&nbsp;&nbsp;→
             </Link>
           </div>
-          <p className="mt-2 max-w-2xl text-sm leading-relaxed text-body">
+          <p className="sr-only">
             We supply genuine products from established tool, hardware and
             outdoor brands, including Milwaukee, Makita, Knipex, Thule, LEKI
-            and Stanley — with the full brand directory on our{" "}
-            <Link href="/brands" className="font-medium underline underline-offset-4">
-              Brands page
-            </Link>
-            .
+            and Stanley, with the full brand directory on our Brands page.
           </p>
-          <ul className="mt-7 grid grid-cols-2 items-center gap-x-6 gap-y-8 sm:grid-cols-3 lg:grid-cols-6">
-            {featuredBrands().map((brand) => (
-              <li key={brand.slug} className="flex justify-center">
-                <BrandMark brand={brand} />
-              </li>
-            ))}
-          </ul>
         </div>
       </section>
 
       {/* Category cards */}
       <section aria-label="Product categories" className="bg-white">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 px-4 pb-16 sm:px-6 md:grid-cols-2 lg:px-8">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 px-4 py-6 sm:px-6 md:grid-cols-2 lg:px-8">
           {[
             {
               href: "/tools-hardware",
               title: "Tools & Hardware",
               copy: "Professional power tools, hand tools, accessories and hardware from leading brands.",
-              image:
-                "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=1000&q=80&auto=format&fit=crop",
-              alt: "Professional cordless drill resting on a workbench",
+              image: "/images/card-tools.png",
+              alt: "Milwaukee professional power tool close-up",
             },
             {
               href: "/sports-outdoor",
               title: "Sports & Outdoor",
               copy: "Climbing, hiking, outdoor equipment and footwear for retailers and e-commerce sellers.",
-              image:
-                "https://images.unsplash.com/photo-1501554728187-ce583db33af7?w=1000&q=80&auto=format&fit=crop",
-              alt: "Hikers with backpacks on a green alpine trail",
+              image: "/images/card-sports.png",
+              alt: "Hiker in a yellow jacket looking across snowy mountains",
             },
           ].map((card) => (
             <Link
               key={card.href}
               href={card.href}
-              className="group relative block aspect-[16/9] overflow-hidden rounded-card"
+              className="group relative block h-[230px] overflow-hidden rounded bg-dark sm:h-[250px]"
             >
               <Image
                 src={card.image}
                 alt={card.alt}
                 fill
                 sizes="(min-width: 768px) 50vw, 100vw"
-                className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent" />
-              <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-6">
-                <div>
-                  <h3 className="text-xl font-bold text-white">{card.title}</h3>
-                  <p className="mt-1.5 max-w-sm text-sm leading-relaxed text-white/85">
-                    {card.copy}
-                  </p>
-                </div>
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-white/15 text-white backdrop-blur transition-colors group-hover:bg-amber group-hover:text-ink">
-                  <ArrowRightIcon className="h-4 w-4" />
-                </span>
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#14141a]/85 via-[#14141a]/40 to-transparent px-6 pb-4 pt-10 text-white">
+                <p className="text-[1.35rem] font-bold">
+                  {card.title}&nbsp;&nbsp;→
+                </p>
+                <p className="mt-1 max-w-sm text-xs leading-relaxed opacity-90">
+                  {card.copy}
+                </p>
               </div>
             </Link>
           ))}
         </div>
       </section>
 
-      {/* Wholesale proposition */}
-      <section aria-labelledby="proposition" className="border-y border-line bg-surface">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8">
-          <div className="border-l-[3px] border-brand-red pl-6">
-            <h2
-              id="proposition"
-              className="text-3xl font-extrabold leading-tight tracking-tight text-ink"
-            >
-              Trusted distribution.
-              <br />
-              Real opportunities.
-            </h2>
-            <p className="mt-4 max-w-md text-[0.95rem] leading-relaxed text-body">
-              We work with established commercial distribution channels and
-              brand-authorized distributors to supply genuine branded products
-              to e-commerce sellers, retailers and wholesale buyers. Orders are
-              supported with the appropriate commercial documentation where
-              applicable.
-            </p>
-            <p className="mt-3 max-w-md text-[0.95rem] leading-relaxed text-body">
-              That combination — genuine products, competitive wholesale
-              economics and a clear, documented process — is what makes a
-              wholesale relationship worth building on.
-            </p>
-            <Link
-              href="/how-it-works"
-              className="mt-6 inline-flex items-center gap-2 rounded-md bg-ink px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-black"
-            >
-              Learn more
-              <ArrowRightIcon className="h-4 w-4" />
-            </Link>
+      {/* Trusted distribution */}
+      <section
+        aria-labelledby="proposition"
+        className="border-b border-line bg-white"
+      >
+        <div className="mx-auto grid max-w-7xl grid-cols-1 px-4 py-8 sm:px-6 lg:grid-cols-2 lg:px-8">
+          <div className="relative pb-10 pr-0 lg:border-r lg:border-line lg:pb-0 lg:pr-12">
+            <span className="absolute left-0 top-1.5 hidden h-14 w-[3px] bg-brand-red lg:block" />
+            <div className="lg:pl-6">
+              <h2
+                id="proposition"
+                className="text-3xl font-semibold leading-[1.08] tracking-[-0.02em] text-soft"
+              >
+                Trusted distribution.
+                <br />
+                Real opportunities.
+              </h2>
+              <p className="mt-4 max-w-lg text-sm leading-relaxed text-body">
+                We work with established commercial distribution channels to
+                supply genuine branded products to e-commerce sellers,
+                retailers and wholesale buyers. All orders are supported with
+                the appropriate commercial documentation where applicable.
+              </p>
+              <Link
+                href="/how-it-works"
+                className="mt-5 inline-flex items-center gap-2 rounded-md bg-dark px-5 py-3 text-xs font-bold text-white transition-colors hover:bg-black"
+              >
+                Learn more&nbsp;&nbsp;→
+              </Link>
+            </div>
           </div>
-          <ul className="space-y-6">
+          <ul className="grid gap-5 pt-2 lg:pl-10">
             {[
               {
                 icon: ShieldCheckIcon,
                 title: "Authentic products",
-                copy: "Genuine branded products from authorized distribution channels — never replicas or grey-market substitutes.",
+                copy: "Genuine branded products from authorized distribution channels.",
               },
               {
                 icon: DocumentIcon,
                 title: "Commercial documentation",
-                copy: "Invoices, packing lists and certificates of origin where applicable, supporting legitimate commercial transactions.",
+                copy: "Invoices, packing lists and certificates (where applicable).",
               },
               {
                 icon: TagIcon,
                 title: "Competitive wholesale pricing",
-                copy: "Access to wholesale quantities and favorable pricing through manufacturer-source markets and established channels.",
+                copy: "Access to wholesale quantities and favorable pricing.",
               },
               {
                 icon: GlobeIcon,
                 title: "Global fulfillment",
-                copy: "Flexible shipping options to the US, UK and international markets, matched to your order size and timing.",
+                copy: "Flexible shipping options to the US, UK and international markets.",
               },
             ].map((item) => (
-              <li key={item.title} className="flex gap-4">
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md border border-line bg-white text-ink">
-                  <item.icon className="h-5 w-5" />
-                </span>
+              <li key={item.title} className="flex items-start gap-4">
+                <item.icon className="h-7 w-7 shrink-0 text-ink" />
                 <div>
-                  <h3 className="text-[0.95rem] font-bold text-ink">
-                    {item.title}
-                  </h3>
-                  <p className="mt-1 text-sm leading-relaxed text-body">
+                  <h3 className="text-sm font-bold text-ink">{item.title}</h3>
+                  <p className="mt-0.5 text-[0.8rem] leading-relaxed text-body">
                     {item.copy}
                   </p>
                 </div>
@@ -345,29 +331,23 @@ export default function HomePage() {
       </section>
 
       {/* How it works */}
-      <section aria-labelledby="how-it-works" className="bg-white">
-        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <section
+        aria-labelledby="how-it-works"
+        className="border-b border-line bg-white"
+      >
+        <div className="mx-auto max-w-7xl px-4 py-7 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between gap-4">
-            <h2
-              id="how-it-works"
-              className="text-2xl font-bold tracking-tight text-ink"
-            >
+            <h2 id="how-it-works" className="text-xl font-semibold text-soft">
               How it works
             </h2>
             <Link
               href="/how-it-works"
-              className="inline-flex items-center gap-1.5 text-sm font-semibold text-ink underline-offset-4 hover:underline"
+              className="text-xs font-bold text-ink underline-offset-4 hover:underline"
             >
-              View full process
-              <ArrowRightIcon className="h-4 w-4" />
+              View full process&nbsp;&nbsp;→
             </Link>
           </div>
-          <p className="mt-2 max-w-2xl text-sm leading-relaxed text-body">
-            From first catalog request to delivered order, the process is
-            simple and transparent: you always see availability, MOQ, pricing
-            and shipping terms before you commit to anything.
-          </p>
-          <div className="mt-9">
+          <div className="mt-5">
             <HowItWorksSteps />
           </div>
         </div>
@@ -376,69 +356,54 @@ export default function HomePage() {
       {/* Seller support + shipping */}
       <section
         aria-label="Seller support and shipping"
-        className="border-y border-line bg-white"
+        className="bg-white"
       >
-        <div className="mx-auto grid max-w-7xl grid-cols-1 divide-y divide-line px-4 sm:px-6 lg:grid-cols-2 lg:divide-x lg:divide-y-0 lg:px-8">
-          <div className="py-12 lg:pr-12">
-            <h2 className="text-xl font-bold tracking-tight text-ink">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 px-4 py-7 sm:px-6 lg:grid-cols-2 lg:px-8">
+          <div className="pb-10 lg:border-r lg:border-line lg:pb-0 lg:pr-12">
+            <h2 className="text-lg font-bold text-ink">
               Support for e-commerce sellers
             </h2>
-            <p className="mt-3 max-w-md text-sm leading-relaxed text-body">
-              We help sellers with brand and model selection, catalog access,
-              MOQ information, wholesale pricing enquiries and order
-              coordination. For Amazon, Walmart and other marketplace sellers
-              who need brand or product permission documentation, we can
-              provide documentation support before a purchase order for a small
-              service fee, where applicable. Conditions apply — and no
-              supplier can guarantee marketplace approval.
+            <p className="mt-3 max-w-lg text-[0.82rem] leading-relaxed text-body">
+              We can provide documentation support for Amazon, Walmart and
+              other marketplace sellers who need brand or product permission
+              documentation. Conditions apply — and no supplier can guarantee
+              marketplace approval.
             </p>
-            <Link
-              href="/how-it-works#documentation"
-              className="mt-5 inline-flex items-center gap-2 rounded-md bg-ink px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-black"
-            >
-              Learn more
-              <ArrowRightIcon className="h-4 w-4" />
-            </Link>
-            <p className="mt-6 text-xs font-semibold uppercase tracking-wider text-faint">
-              Supporting sellers on
-            </p>
-            <p className="mt-2 flex items-center gap-6 text-lg font-bold text-muted">
-              <span>amazon</span>
-              <span>Walmart</span>
-              <span className="text-sm font-semibold">
-                + other marketplaces
-              </span>
-            </p>
+            <div className="mt-4 flex flex-wrap items-center gap-7">
+              <Link
+                href="/how-it-works#documentation"
+                className="inline-flex items-center gap-2 rounded-md bg-dark px-5 py-3 text-xs font-bold text-white transition-colors hover:bg-black"
+              >
+                Learn more&nbsp;&nbsp;→
+              </Link>
+              <span className="text-lg font-bold text-muted">amazon</span>
+              <span className="text-lg font-bold text-muted">Walmart</span>
+            </div>
           </div>
-          <div className="py-12 lg:pl-12">
-            <h2 className="text-xl font-bold tracking-tight text-ink">
+          <div className="lg:pl-10">
+            <h2 className="text-lg font-bold text-ink">
               Shipping that fits your order
             </h2>
-            <p className="mt-3 max-w-md text-sm leading-relaxed text-body">
-              Shipping options vary by order size, destination, timing and
-              product. Costs and timing are always confirmed with you before
-              the order is finalized, and documentation accompanies the
-              shipment as applicable.
-            </p>
-            <ul className="mt-7 grid grid-cols-2 gap-6 sm:grid-cols-4">
+            <ul className="mt-6 grid grid-cols-2 gap-5 sm:grid-cols-4">
               {[
                 { icon: PlaneIcon, title: "Air Freight", copy: "Fast delivery" },
                 { icon: ShipIcon, title: "Sea Freight", copy: "Cost-effective" },
                 { icon: ClockIcon, title: "Express", copy: "Time-sensitive" },
                 {
                   icon: ContainerIcon,
-                  title: "Full / Partial Containers",
-                  copy: "Larger orders",
+                  title: "Full / Partial",
+                  copy: "Containers",
                 },
               ].map((method) => (
                 <li key={method.title} className="text-center">
-                  <span className="mx-auto flex h-11 w-11 items-center justify-center rounded-md bg-surface text-ink">
-                    <method.icon className="h-5 w-5" />
-                  </span>
-                  <h3 className="mt-2.5 text-xs font-bold text-ink">
+                  <method.icon
+                    className="mx-auto h-9 w-9"
+                    style={{ color: "#6b5cff" }}
+                  />
+                  <h3 className="mt-2.5 text-[0.8rem] font-bold text-ink">
                     {method.title}
                   </h3>
-                  <p className="mt-1 text-[0.7rem] text-muted">{method.copy}</p>
+                  <p className="mt-0.5 text-xs text-body">{method.copy}</p>
                 </li>
               ))}
             </ul>
@@ -446,104 +411,131 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SEO editorial + wide image */}
+      {/* Wholesale editorial band with container imagery */}
+      <section
+        aria-labelledby="wholesale-band"
+        className="relative overflow-hidden bg-surface-2"
+      >
+        <div className="pointer-events-none absolute inset-y-0 right-0 hidden md:block">
+          <Image
+            src="/images/containers.png"
+            alt=""
+            width={570}
+            height={224}
+            className="h-full w-auto object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-surface-2 via-surface-2/50 to-transparent md:w-44" />
+        </div>
+        <div className="relative mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+          <h2
+            id="wholesale-band"
+            className="max-w-xl text-3xl font-semibold leading-[1.1] tracking-[-0.02em] text-soft"
+          >
+            Wholesale branded products for e-commerce sellers and retailers.
+          </h2>
+          <p className="mt-3 max-w-xl text-[0.82rem] leading-relaxed text-body">
+            Hyprr Retail is a wholesale distributor in the USA, supplying
+            genuine branded tools, hardware and outdoor products to e-commerce
+            sellers, retailers and other wholesale buyers.
+          </p>
+          <Link
+            href="/about"
+            className="mt-5 inline-flex items-center gap-2 rounded-md border-[1.5px] border-ink bg-white px-5 py-3 text-xs font-extrabold text-ink transition-colors hover:bg-surface"
+          >
+            Learn more about Hyprr Retail&nbsp;&nbsp;→
+          </Link>
+        </div>
+      </section>
+
+      {/* SEO editorial */}
       <section aria-labelledby="wholesale-editorial" className="bg-white">
-        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-5 lg:gap-14">
-            <div className="lg:col-span-3">
-              <h2
-                id="wholesale-editorial"
-                className="text-2xl font-bold tracking-tight text-ink sm:text-3xl"
+        <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
+          <h2
+            id="wholesale-editorial"
+            className="text-2xl font-semibold tracking-[-0.02em] text-soft"
+          >
+            A wholesale supplier built for commercial buyers
+          </h2>
+          <div className="mt-5 space-y-4 text-[0.9rem] leading-relaxed text-body">
+            <p>
+              Hyprr Retail is a B2B wholesale supplier and distributor serving
+              the United States first, with the United Kingdom and other
+              international markets also supported. We supply genuine branded
+              products — professional tools, hardware, and sports and outdoor
+              equipment — in wholesale quantities to e-commerce sellers, online
+              retailers, retail stores and wholesale buyers.
+            </p>
+            <p>
+              For Amazon sellers and Walmart sellers, working with a wholesale
+              distributor that supplies genuine branded inventory and proper
+              commercial documentation matters. Marketplace sellers need real
+              invoices, traceable supply and clear commercial terms. That is
+              exactly how we operate: every order runs through a purchase-order
+              process with confirmed availability, MOQ and pricing, and is
+              supported by the documentation that accompanies a legitimate
+              wholesale transaction.
+            </p>
+            <p>
+              Our range covers{" "}
+              <Link
+                href="/tools-hardware"
+                className="font-medium underline underline-offset-4"
               >
-                Wholesale branded products for e-commerce sellers and retailers
-              </h2>
-              <div className="mt-5 space-y-4 text-[0.95rem] leading-relaxed text-body">
-                <p>
-                  Hyprr Retail is a B2B wholesale supplier and distributor
-                  serving the United States first, with the United Kingdom and
-                  other international markets also supported. We supply genuine
-                  branded products — professional tools, hardware, and sports
-                  and outdoor equipment — in wholesale quantities to e-commerce
-                  sellers, online retailers, retail stores and wholesale
-                  buyers.
-                </p>
-                <p>
-                  For Amazon sellers and Walmart sellers, working with a
-                  wholesale distributor that supplies genuine branded inventory
-                  and proper commercial documentation matters. Marketplace
-                  sellers need real invoices, traceable supply and clear
-                  commercial terms. That is exactly how we operate: every order
-                  runs through a purchase-order process with confirmed
-                  availability, MOQ and pricing, and is supported by the
-                  documentation that accompanies a legitimate wholesale
-                  transaction.
-                </p>
-                <p>
-                  Our range covers{" "}
-                  <Link
-                    href="/tools-hardware"
-                    className="font-medium underline underline-offset-4"
-                  >
-                    wholesale tools and hardware
-                  </Link>{" "}
-                  — including power tools, hand tools and accessories from
-                  brands like Milwaukee, Makita, Stanley and Knipex — and{" "}
-                  <Link
-                    href="/sports-outdoor"
-                    className="font-medium underline underline-offset-4"
-                  >
-                    wholesale sports and outdoor products
-                  </Link>{" "}
-                  such as climbing equipment, hiking gear, backpacks and
-                  outdoor footwear from brands like Petzl, Thule, LEKI and
-                  KASK.
-                </p>
-                <p>
-                  Whether you&apos;re building a branded wholesale assortment for an
-                  online store, expanding a retail range, or looking for a
-                  reliable wholesale supplier for your marketplace business,
-                  the starting point is the same:{" "}
-                  <Link
-                    href="/contact"
-                    className="font-medium underline underline-offset-4"
-                  >
-                    request our catalog
-                  </Link>{" "}
-                  and tell us which brands and models interest you.
-                </p>
-              </div>
-            </div>
-            <div className="relative min-h-64 overflow-hidden rounded-card lg:col-span-2">
-              <Image
-                src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=1000&q=80&auto=format&fit=crop"
-                alt="Forklift moving freight between stacked shipping containers"
-                fill
-                sizes="(min-width: 1024px) 40vw, 100vw"
-                className="object-cover"
-              />
-            </div>
+                wholesale tools and hardware
+              </Link>{" "}
+              — including power tools, hand tools and accessories from brands
+              like Milwaukee, Makita, Stanley and Knipex — and{" "}
+              <Link
+                href="/sports-outdoor"
+                className="font-medium underline underline-offset-4"
+              >
+                wholesale sports and outdoor products
+              </Link>{" "}
+              such as climbing equipment, hiking gear, backpacks and outdoor
+              footwear from brands like Petzl, Thule, LEKI and KASK.
+            </p>
+            <p>
+              Whether you&apos;re building a branded wholesale assortment for
+              an online store, expanding a retail range, or looking for a
+              reliable wholesale supplier for your marketplace business, the
+              starting point is the same:{" "}
+              <Link
+                href="/contact"
+                className="font-medium underline underline-offset-4"
+              >
+                request our catalog
+              </Link>{" "}
+              and tell us which brands and models interest you.
+            </p>
           </div>
         </div>
       </section>
 
       {/* FAQs */}
-      <section id="faqs" aria-labelledby="faq-heading" className="border-t border-line bg-surface">
-        <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
+      <section
+        id="faqs"
+        aria-labelledby="faq-heading"
+        className="border-t border-line bg-surface"
+      >
+        <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
           <h2
             id="faq-heading"
-            className="text-2xl font-bold tracking-tight text-ink sm:text-3xl"
+            className="text-2xl font-semibold tracking-[-0.02em] text-soft"
           >
             Frequently asked questions
           </h2>
           <p className="mt-2 text-sm leading-relaxed text-body">
             Straight answers about wholesale ordering, MOQ, documentation and
             shipping. Anything else —{" "}
-            <Link href="/contact" className="font-medium underline underline-offset-4">
+            <Link
+              href="/contact"
+              className="font-medium underline underline-offset-4"
+            >
               contact us
             </Link>
             .
           </p>
-          <div className="mt-8">
+          <div className="mt-7">
             <FaqAccordion faqs={HOME_FAQS} />
           </div>
         </div>

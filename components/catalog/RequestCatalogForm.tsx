@@ -13,9 +13,9 @@ import {
 import { ArrowRightIcon, CheckCircleIcon } from "../icons";
 
 const inputClasses =
-  "w-full rounded-md border border-line bg-white px-3 py-2.5 text-sm text-ink placeholder:text-faint focus:border-ink focus:outline-none";
+  "w-full rounded-[5px] border border-line bg-white px-2.5 py-2 text-xs text-ink placeholder:text-faint focus:border-ink focus:outline-none";
 
-const labelClasses = "mb-1.5 block text-xs font-semibold text-ink";
+const labelClasses = "mb-1 block text-xs font-extrabold text-ink";
 
 interface FormState {
   status: "idle" | "submitting" | "success" | "error";
@@ -89,10 +89,12 @@ export default function RequestCatalogForm({
     return (
       <div
         role="status"
-        className="rounded-card border border-line bg-surface p-6 text-center"
+        className="rounded-md border border-[#bfe6cb] bg-[#eefaf1] p-6 text-center"
       >
-        <CheckCircleIcon className="mx-auto h-10 w-10 text-ink" />
-        <h3 className="mt-3 text-lg font-bold text-ink">Request received</h3>
+        <CheckCircleIcon className="mx-auto h-10 w-10 text-[#146b2b]" />
+        <h3 className="mt-3 text-lg font-bold text-[#146b2b]">
+          Request received
+        </h3>
         <p className="mt-2 text-sm leading-relaxed text-body">
           Thanks — we&apos;ve received your catalog request. Our team will
           review it and reply to the email address you provided, usually within
@@ -102,7 +104,7 @@ export default function RequestCatalogForm({
           <button
             type="button"
             onClick={onSuccessClose}
-            className="mt-5 inline-flex items-center gap-2 rounded-md bg-ink px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-black"
+            className="mt-5 inline-flex items-center gap-2 rounded-md bg-dark px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-black"
           >
             Close
           </button>
@@ -112,210 +114,217 @@ export default function RequestCatalogForm({
   }
 
   return (
-    <form onSubmit={handleSubmit} noValidate={false}>
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-        <div>
-          <label htmlFor="rc-name" className={labelClasses}>
-            Name <span className="text-brand-red">*</span>
-          </label>
-          <input
-            id="rc-name"
-            name="name"
-            type="text"
-            required
-            autoComplete="name"
-            placeholder="Your name"
-            className={inputClasses}
-          />
-        </div>
-        <div>
-          <label htmlFor="rc-company" className={labelClasses}>
-            Business / company
-          </label>
-          <input
-            id="rc-company"
-            name="company"
-            type="text"
-            autoComplete="organization"
-            placeholder="Company name"
-            className={inputClasses}
-          />
-        </div>
-        <div>
-          <label htmlFor="rc-email" className={labelClasses}>
-            Email <span className="text-brand-red">*</span>
-          </label>
-          <input
-            id="rc-email"
-            name="email"
-            type="email"
-            required
-            autoComplete="email"
-            placeholder="you@company.com"
-            className={inputClasses}
-          />
-        </div>
-        <div>
-          <label htmlFor="rc-phone" className={labelClasses}>
-            Phone <span className="font-normal text-muted">(optional)</span>
-          </label>
-          <input
-            id="rc-phone"
-            name="phone"
-            type="tel"
-            autoComplete="tel"
-            placeholder="+1 555 000 0000"
-            className={inputClasses}
-          />
-        </div>
-        <div>
-          <label htmlFor="rc-business-type" className={labelClasses}>
-            Business type <span className="text-brand-red">*</span>
-          </label>
-          <select
-            id="rc-business-type"
-            name="businessType"
-            required
-            defaultValue=""
-            className={inputClasses}
-          >
-            <option value="" disabled>
-              Select your business type
-            </option>
-            {BUSINESS_TYPES.map((type) => (
-              <option key={type} value={type}>
-                {type}
+    <form onSubmit={handleSubmit} className="text-xs">
+      <div className="grid grid-cols-1 gap-x-6 gap-y-3.5 sm:grid-cols-2">
+        {/* Left column — business details */}
+        <div className="grid content-start gap-3.5">
+          <div>
+            <label htmlFor="rc-name" className={labelClasses}>
+              Name <span className="text-brand-red">*</span>
+            </label>
+            <input
+              id="rc-name"
+              name="name"
+              type="text"
+              required
+              autoComplete="name"
+              placeholder="Your name"
+              className={inputClasses}
+            />
+          </div>
+          <div>
+            <label htmlFor="rc-company" className={labelClasses}>
+              Business / company
+            </label>
+            <input
+              id="rc-company"
+              name="company"
+              type="text"
+              autoComplete="organization"
+              placeholder="Company name"
+              className={inputClasses}
+            />
+          </div>
+          <div>
+            <label htmlFor="rc-email" className={labelClasses}>
+              Email <span className="text-brand-red">*</span>
+            </label>
+            <input
+              id="rc-email"
+              name="email"
+              type="email"
+              required
+              autoComplete="email"
+              placeholder="you@company.com"
+              className={inputClasses}
+            />
+          </div>
+          <div>
+            <label htmlFor="rc-phone" className={labelClasses}>
+              Phone <span className="font-medium text-muted">(optional)</span>
+            </label>
+            <input
+              id="rc-phone"
+              name="phone"
+              type="tel"
+              autoComplete="tel"
+              placeholder="+1 555 000 0000"
+              className={inputClasses}
+            />
+          </div>
+          <div>
+            <label htmlFor="rc-business-type" className={labelClasses}>
+              Business type <span className="text-brand-red">*</span>
+            </label>
+            <select
+              id="rc-business-type"
+              name="businessType"
+              required
+              defaultValue=""
+              className={inputClasses}
+            >
+              <option value="" disabled>
+                Select your business type
               </option>
-            ))}
-          </select>
+              {BUSINESS_TYPES.map((type) => (
+                <option key={type} value={type}>
+                  {type}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label htmlFor="rc-marketplace" className={labelClasses}>
+              Marketplace{" "}
+              <span className="font-medium text-muted">(if applicable)</span>
+            </label>
+            <select
+              id="rc-marketplace"
+              name="marketplace"
+              defaultValue=""
+              className={inputClasses}
+            >
+              <option value="">Select marketplace</option>
+              {MARKETPLACES.map((mp) => (
+                <option key={mp} value={mp}>
+                  {mp}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label htmlFor="rc-country" className={labelClasses}>
+              Country
+            </label>
+            <select
+              id="rc-country"
+              name="country"
+              defaultValue=""
+              className={inputClasses}
+            >
+              <option value="">Select country</option>
+              {COUNTRIES.map((country) => (
+                <option key={country} value={country}>
+                  {country}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label htmlFor="rc-models" className={labelClasses}>
+              Specific model or product{" "}
+              <span className="font-medium text-muted">(optional)</span>
+            </label>
+            <input
+              id="rc-models"
+              name="models"
+              type="text"
+              placeholder="e.g. Milwaukee M18, Makita 18V, etc."
+              className={inputClasses}
+            />
+          </div>
+          <div>
+            <label htmlFor="rc-order-size" className={labelClasses}>
+              Estimated order size{" "}
+              <span className="font-medium text-muted">(optional)</span>
+            </label>
+            <input
+              id="rc-order-size"
+              name="orderSize"
+              type="text"
+              placeholder="e.g. 200 units / $15,000"
+              className={inputClasses}
+            />
+          </div>
         </div>
-        <div>
-          <label htmlFor="rc-marketplace" className={labelClasses}>
-            Marketplace (if applicable)
-          </label>
-          <select
-            id="rc-marketplace"
-            name="marketplace"
-            defaultValue=""
-            className={inputClasses}
-          >
-            <option value="">Select marketplace</option>
-            {MARKETPLACES.map((mp) => (
-              <option key={mp} value={mp}>
-                {mp}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div>
-          <label htmlFor="rc-country" className={labelClasses}>
-            Country
-          </label>
-          <select
-            id="rc-country"
-            name="country"
-            defaultValue=""
-            className={inputClasses}
-          >
-            <option value="">Select country</option>
-            {COUNTRIES.map((country) => (
-              <option key={country} value={country}>
-                {country}
-              </option>
-            ))}
-          </select>
-        </div>
-      </div>
 
-      <fieldset className="mt-5">
-        <legend className={labelClasses}>
-          Brands you&apos;re interested in{" "}
-          <span className="font-normal text-muted">(select multiple)</span>
-        </legend>
-        <div className="max-h-52 space-y-4 overflow-y-auto rounded-md border border-line bg-surface p-4">
-          {CATEGORIES.map((category) => (
-            <div key={category.slug}>
-              <p className="mb-2 text-[0.7rem] font-semibold uppercase tracking-wider text-muted">
-                {category.name}
-              </p>
-              <div className="grid grid-cols-1 gap-1.5 sm:grid-cols-2">
-                {[
-                  ...BRANDS.filter((b) => b.category === category.slug).map(
-                    (b) => b.name
-                  ),
-                  `${OTHER_BRAND_OPTION} (${category.name})`,
-                ].map((name) => (
-                  <label
-                    key={name}
-                    className="flex cursor-pointer items-center gap-2 text-sm text-body"
-                  >
-                    <input
-                      type="checkbox"
-                      checked={selectedBrands.includes(name)}
-                      onChange={() => toggleBrand(name)}
-                      className="h-4 w-4 rounded border-line accent-ink"
-                    />
-                    {name}
-                  </label>
-                ))}
+        {/* Right column — brand multi-select */}
+        <fieldset>
+          <legend className="text-xs font-extrabold text-ink">
+            Brands you&apos;re interested in
+          </legend>
+          <p className="mt-0.5 text-[0.7rem] font-medium text-body">
+            (Select multiple)
+          </p>
+          <div className="mt-2.5 space-y-3.5">
+            {CATEGORIES.map((category) => (
+              <div key={category.slug}>
+                <p className="mb-1.5 text-[0.62rem] font-bold uppercase tracking-wider text-faint">
+                  {category.name}
+                </p>
+                <div className="grid gap-1.5">
+                  {[
+                    ...BRANDS.filter((b) => b.category === category.slug).map(
+                      (b) => b.name
+                    ),
+                    `${OTHER_BRAND_OPTION} (${category.name})`,
+                  ].map((name) => (
+                    <label
+                      key={name}
+                      className="flex cursor-pointer items-center gap-2.5 font-medium text-body"
+                    >
+                      <input
+                        type="checkbox"
+                        checked={selectedBrands.includes(name)}
+                        onChange={() => toggleBrand(name)}
+                        className="h-[15px] w-[15px] shrink-0 accent-ink"
+                      />
+                      {name}
+                    </label>
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
-      </fieldset>
-
-      <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
-        <div>
-          <label htmlFor="rc-models" className={labelClasses}>
-            Specific model or product{" "}
-            <span className="font-normal text-muted">(optional)</span>
-          </label>
-          <input
-            id="rc-models"
-            name="models"
-            type="text"
-            placeholder="e.g. Milwaukee M18, Makita 18V, etc."
-            className={inputClasses}
-          />
-        </div>
-        <div>
-          <label htmlFor="rc-order-size" className={labelClasses}>
-            Estimated order size{" "}
-            <span className="font-normal text-muted">(optional)</span>
-          </label>
-          <input
-            id="rc-order-size"
-            name="orderSize"
-            type="text"
-            placeholder="e.g. 200 units / $15,000"
-            className={inputClasses}
-          />
-        </div>
+            ))}
+          </div>
+        </fieldset>
       </div>
 
       <div className="mt-4">
         <label htmlFor="rc-message" className={labelClasses}>
           Additional information{" "}
-          <span className="font-normal text-muted">(optional)</span>
+          <span className="font-medium text-muted">(optional)</span>
         </label>
         <textarea
           id="rc-message"
           name="message"
           rows={3}
           placeholder="Tell us about your business or specific requirements."
-          className={inputClasses}
+          className={`${inputClasses} resize-y`}
         />
       </div>
 
-      <label className="mt-4 flex cursor-pointer items-start gap-2.5 text-xs leading-relaxed text-muted">
+      <label className="mt-3.5 flex cursor-pointer items-start gap-2.5 text-[0.7rem] leading-relaxed text-body">
         <input
           type="checkbox"
           required
-          className="mt-0.5 h-4 w-4 shrink-0 rounded border-line accent-ink"
+          className="mt-0.5 h-[15px] w-[15px] shrink-0 accent-ink"
         />
         <span>
           I agree to be contacted by Hyprr Retail regarding my request. See our{" "}
-          <Link href="/privacy" className="underline hover:text-ink">
+          <Link
+            href="/privacy"
+            className="text-[#2b6cd9] underline hover:text-ink"
+          >
             Privacy Policy
           </Link>{" "}
           for details.
@@ -334,7 +343,7 @@ export default function RequestCatalogForm({
       <button
         type="submit"
         disabled={state.status === "submitting"}
-        className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-md bg-amber px-6 py-3 text-sm font-bold text-ink transition-colors hover:bg-amber-hover disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
+        className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-md bg-amber px-6 py-3.5 text-[0.9rem] font-extrabold text-ink transition-colors hover:bg-amber-hover disabled:cursor-not-allowed disabled:opacity-60"
       >
         {state.status === "submitting" ? "Sending…" : "Send Request"}
         <ArrowRightIcon className="h-4 w-4" />

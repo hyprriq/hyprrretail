@@ -3,9 +3,10 @@ import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import HowItWorksSteps from "@/components/HowItWorksSteps";
 import RequestCatalogButton from "@/components/catalog/RequestCatalogButton";
+import Image from "next/image";
 import {
   ArrowRightIcon,
-  CheckCircleIcon,
+  CheckIcon,
   ClockIcon,
   ContainerIcon,
   DocumentIcon,
@@ -115,11 +116,13 @@ export default function HowItWorksPage() {
               applicable to the transaction. Depending on the order, that can
               include:
             </p>
-            <ul className="mt-5 space-y-3">
+            <ul className="mt-5 space-y-3.5">
               {DOCUMENTATION_ITEMS.map((item) => (
                 <li key={item} className="flex items-center gap-3">
-                  <CheckCircleIcon className="h-5 w-5 shrink-0 text-ink" />
-                  <span className="text-sm font-semibold text-ink">{item}</span>
+                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#1a9b3c]">
+                    <CheckIcon className="h-3 w-3 text-white" strokeWidth={3.5} />
+                  </span>
+                  <span className="text-sm font-semibold text-body">{item}</span>
                 </li>
               ))}
             </ul>
@@ -223,9 +226,12 @@ export default function HowItWorksPage() {
             ].map((method) => (
               <li
                 key={method.title}
-                className="rounded-card border border-line bg-white p-5"
+                className="rounded border border-line bg-white p-5 text-center"
               >
-                <method.icon className="h-6 w-6 text-ink" />
+                <method.icon
+                  className="mx-auto h-9 w-9"
+                  style={{ color: "#6b5cff" }}
+                />
                 <h3 className="mt-3 text-sm font-bold text-ink">
                   {method.title}
                 </h3>
@@ -239,8 +245,18 @@ export default function HowItWorksPage() {
       </section>
 
       {/* CTA */}
-      <section aria-label="Contact" className="bg-dark">
-        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 px-4 py-12 sm:px-6 md:flex-row md:items-center lg:px-8">
+      <section aria-label="Contact" className="relative overflow-hidden bg-dark">
+        <div className="pointer-events-none absolute inset-y-0 right-0 hidden opacity-50 md:block">
+          <Image
+            src="/images/containers.png"
+            alt=""
+            width={570}
+            height={224}
+            className="h-full w-auto object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-dark via-dark/60 to-transparent" />
+        </div>
+        <div className="relative mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 px-4 py-12 sm:px-6 md:flex-row md:items-center lg:px-8">
           <div>
             <h2 className="text-2xl font-bold tracking-tight text-white">
               Have questions about the process?
