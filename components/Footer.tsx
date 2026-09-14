@@ -8,6 +8,7 @@ const quickLinks = [
   { label: "Brands", href: "/brands" },
   ...CATEGORY_LINKS,
   { label: "How It Works", href: "/how-it-works" },
+  { label: "Insights", href: "/insights" },
 ];
 
 const companyLinks = [
