@@ -152,24 +152,58 @@ export default function HowItWorksPage() {
             </p>
           </div>
 
-          {/* Evidence component — populated with real redacted documents later. */}
-          <div className="flex flex-col rounded-card border border-line bg-surface p-8">
-            <DocumentIcon className="h-8 w-8 text-muted" />
-            <h3 className="mt-4 text-lg font-bold text-ink">
-              Example transaction documentation
-            </h3>
+          {/* Evidence — real transaction documents, redacted for confidentiality. */}
+          <div className="flex flex-col rounded-card border border-line bg-surface p-6 sm:p-8">
+            <div className="flex items-center gap-3">
+              <DocumentIcon className="h-6 w-6 text-ink" />
+              <h3 className="text-lg font-bold text-ink">
+                Example transaction documentation
+              </h3>
+            </div>
             <p className="mt-3 text-sm leading-relaxed text-body">
-              We&apos;re preparing redacted examples of real commercial
-              documentation — invoices, shipping documents and order paperwork
-              from completed wholesale transactions — with private details
-              removed. They&apos;ll appear here once prepared.
+              Documents from completed wholesale transactions. Company,
+              personal, banking and shipment-identifier details are redacted;
+              the commercial substance — routes, quantities, weights and terms
+              — is unedited.
             </p>
-            <p className="mt-3 text-sm leading-relaxed text-body">
-              In the meantime, if you&apos;d like to understand what
-              documentation accompanies a typical order for your marketplace or
-              destination, ask us directly.
+            <div className="mt-5 grid grid-cols-2 gap-4">
+              {[
+                {
+                  src: "/images/doc-bill-of-lading.jpg",
+                  alt: "Redacted express bill of lading for a sea-freight wholesale shipment from Italy to New York",
+                  label: "Express Bill of Lading",
+                  sub: "Sea freight, Genova → New York",
+                },
+                {
+                  src: "/images/doc-ship-notice.jpg",
+                  alt: "Redacted ship departure notice for an export consignment from Genova to Newark",
+                  label: "Ship Departure Notice",
+                  sub: "Export forwarding, Genova → Newark",
+                },
+              ].map((doc) => (
+                <figure key={doc.src} className="overflow-hidden rounded border border-line bg-white">
+                  <div className="relative aspect-[1309/1850]">
+                    <Image
+                      src={doc.src}
+                      alt={doc.alt}
+                      fill
+                      sizes="(min-width: 1024px) 20vw, 45vw"
+                      className="object-cover"
+                    />
+                  </div>
+                  <figcaption className="border-t border-line px-3 py-2.5">
+                    <p className="text-xs font-bold text-ink">{doc.label}</p>
+                    <p className="mt-0.5 text-[0.68rem] text-muted">{doc.sub}</p>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+            <p className="mt-4 text-[0.7rem] leading-relaxed text-faint">
+              Redacted for confidentiality. Documentation varies by order,
+              destination and marketplace — ask us what accompanies a typical
+              order for your channel.
             </p>
-            <div className="mt-6">
+            <div className="mt-4">
               <Link
                 href="/contact"
                 className="inline-flex items-center gap-2 rounded-md border border-line bg-white px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:border-ink"
