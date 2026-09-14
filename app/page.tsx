@@ -123,13 +123,13 @@ export default function HomePage() {
           className="pointer-events-none absolute inset-y-0 left-[34%] right-0 hidden overflow-hidden lg:block"
         >
           <Image
-            src="/images/hero-ambient.jpg"
+            src="/images/hero-ambient2.jpg"
             alt=""
             fill
             sizes="66vw"
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-surface/20" />
+          <div className="absolute inset-0 bg-surface/10" />
         </div>
         {/* Sharp subject anchored right at native proportions */}
         <div className="pointer-events-none absolute inset-y-0 right-0 hidden lg:block">
@@ -145,10 +145,25 @@ export default function HomePage() {
         {/* Blend the scene into the light band beneath the HTML copy */}
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-y-0 left-[30%] hidden w-72 bg-gradient-to-r from-surface via-surface/80 to-transparent lg:block"
+          className="pointer-events-none absolute inset-y-0 left-[26%] hidden w-80 bg-gradient-to-r from-surface via-surface/75 to-transparent lg:block"
         />
+        {/* Trust chips overlaid at the hero's base, per the approved final visual */}
+        <div className="absolute inset-x-0 bottom-0 hidden lg:block">
+          <div className="bg-gradient-to-t from-white via-white/75 to-transparent pb-4 pt-10">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <TrustChips
+                chips={[
+                  { icon: ShieldCheckIcon, label: "Genuine Products" },
+                  { icon: BoxesIcon, label: "Wholesale Quantities" },
+                  { icon: DocumentIcon, label: "Commercial Documentation" },
+                  { icon: GlobeIcon, label: "Global Shipping" },
+                ]}
+              />
+            </div>
+          </div>
+        </div>
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl py-10 lg:max-w-xl lg:py-14 xl:max-w-2xl">
+          <div className="max-w-2xl py-10 lg:max-w-xl lg:pb-32 lg:pt-16 xl:max-w-2xl">
             <p className="text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-muted">
               Genuine brands. Global supply.
             </p>
@@ -188,8 +203,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Trust strip */}
-      <div className="border-b border-line bg-white">
+      {/* Trust strip (mobile/tablet — on desktop the chips overlay the hero) */}
+      <div className="border-b border-line bg-white lg:hidden">
         <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
           <TrustChips
             chips={[
