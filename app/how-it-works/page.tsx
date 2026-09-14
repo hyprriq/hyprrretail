@@ -248,10 +248,10 @@ export default function HowItWorksPage() {
       <section aria-label="Contact" className="relative overflow-hidden bg-dark">
         <div className="pointer-events-none absolute inset-y-0 right-0 hidden opacity-50 md:block">
           <Image
-            src="/images/containers.png"
+            src="/images/logistics.jpg"
             alt=""
-            width={570}
-            height={224}
+            width={1400}
+            height={933}
             className="h-full w-auto object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-dark via-dark/60 to-transparent" />

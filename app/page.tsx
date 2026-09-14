@@ -483,8 +483,8 @@ export default function HomePage() {
           </div>
           <div className="relative hidden md:block">
             <Image
-              src="/images/containers.png"
-              alt="Forklift moving freight between stacked shipping containers"
+              src="/images/logistics.jpg"
+              alt="Container ship at port with air freight, truck and rail transport"
               fill
               sizes="480px"
               className="object-cover"

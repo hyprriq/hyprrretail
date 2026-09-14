@@ -29,10 +29,9 @@ export default function SportsOutdoorPage() {
       heroTitle="Sports & Outdoor"
       heroTagline="Equipment people trust outdoors."
       heroCopy="We supply genuine branded climbing, hiking and outdoor products — from trekking poles to helmets to backpacks — to e-commerce sellers, retailers and wholesale buyers."
-      heroImage="/images/hero-sports.jpg"
-      heroImageAlt="Climber with a Thule pack, helmet and carabiners scaling a rock face above the clouds"
-      heroMobilePosition="object-[70%_center]"
-      heroDesktopPosition="object-[center_30%]"
+      heroImage="/images/hero-sports-collage.jpg"
+      heroImageAlt="Outdoor lifestyle collage: hikers on a ridge, lakeside camping gear, mountain biking and fishing at sunset"
+      heroMobilePosition="object-[10%_center]"
       chips={[
         { icon: ShieldCheckIcon, label: "Genuine products" },
         { icon: TagIcon, label: "Competitive pricing" },
@@ -74,8 +73,8 @@ export default function SportsOutdoorPage() {
         "Global fulfillment",
         "Support for e-commerce sellers",
       ]}
-      splitImage="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80&auto=format&fit=crop"
-      splitImageAlt="Snow-capped mountain range under a clear sky"
+      splitImage="/images/hero-sports.jpg"
+      splitImageAlt="Climber with a Thule pack, helmet and carabiners scaling a rock face above the clouds"
       seoTitle="A wholesale outdoor equipment supplier for retailers and sellers"
       seoContent={
         <>
