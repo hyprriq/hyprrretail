@@ -120,32 +120,31 @@ export default function HomePage() {
         {/* Ambient scene extension fills the band between text and subject */}
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-y-0 left-[34%] right-0 hidden overflow-hidden lg:block"
+          className="pointer-events-none absolute inset-y-0 left-[24%] right-0 hidden overflow-hidden lg:block"
         >
           <Image
-            src="/images/hero-ambient3.jpg"
+            src="/images/hero-ambient4.jpg"
             alt=""
             fill
-            sizes="66vw"
+            sizes="76vw"
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-surface/10" />
         </div>
-        {/* Sharp subject anchored right at native proportions */}
+        {/* Sharp full scene anchored right at native proportions */}
         <div className="pointer-events-none absolute inset-y-0 right-0 hidden lg:block">
           <Image
-            src="/images/hero-main.jpg"
+            src="/images/hero-full.jpg"
             alt="Hiker with a Thule backpack beside a Milwaukee tool case, KASK helmet, La Sportiva footwear and trekking poles in the mountains"
-            width={978}
+            width={1398}
             height={1125}
             priority
-            className="h-full w-auto object-cover [mask-image:linear-gradient(to_right,transparent,black_12%)]"
+            className="h-full w-auto object-cover [mask-image:linear-gradient(to_right,transparent,black_10%)]"
           />
         </div>
         {/* Blend the scene into the light band beneath the HTML copy */}
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-y-0 left-[26%] hidden w-80 bg-gradient-to-r from-surface via-surface/75 to-transparent lg:block"
+          className="pointer-events-none absolute inset-y-0 left-[19%] hidden w-72 bg-gradient-to-r from-surface via-surface/70 to-transparent lg:block"
         />
         {/* Trust chips overlaid at the hero's base, per the approved final visual */}
         <div className="absolute inset-x-0 bottom-0 hidden lg:block">
