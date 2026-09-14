@@ -18,7 +18,7 @@ export default function FaqAccordion({ faqs }: { faqs: Faq[] }) {
             {faq.question}
             <ChevronDownIcon className="h-4 w-4 shrink-0 text-muted transition-transform group-open:rotate-180" />
           </summary>
-          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-body">
+          <p className="mt-3 max-w-3xl text-base leading-relaxed text-body">
             {faq.answer}
           </p>
         </details>

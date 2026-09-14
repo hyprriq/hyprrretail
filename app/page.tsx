@@ -152,7 +152,7 @@ export default function HomePage() {
             <p className="text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-muted">
               Genuine brands. Global supply.
             </p>
-            <h1 className="mt-3 max-w-[560px] text-[38px] font-extrabold leading-[0.98] tracking-[-0.03em] sm:text-[44px] lg:text-[56px]">
+            <h1 className="mt-3 max-w-[560px] text-[38px] font-extrabold leading-[0.98] tracking-[-0.04em] sm:text-[44px] lg:text-[56px]">
               <span className="text-soft">Wholesale products</span>
               <br />
               for e-commerce
@@ -167,7 +167,7 @@ export default function HomePage() {
               <RequestCatalogButton variant="primary-lg" />
               <Link
                 href="/brands"
-                className="inline-flex items-center justify-center gap-2 rounded-md border-[1.5px] border-ink bg-white px-6 py-3 text-sm font-extrabold text-ink transition-colors hover:bg-surface"
+                className="inline-flex items-center justify-center gap-2 rounded-md border-[1.5px] border-ink bg-white px-6 py-3 text-sm font-semibold text-ink transition-colors hover:bg-surface"
               >
                 View Our Brands
                 <ArrowRightIcon className="h-4 w-4" />
@@ -224,7 +224,7 @@ export default function HomePage() {
             </ul>
             <Link
               href="/brands"
-              className="text-xs font-bold text-ink underline-offset-4 hover:underline"
+              className="text-xs font-semibold text-ink underline-offset-4 hover:underline"
             >
               View all brands&nbsp;&nbsp;→
             </Link>
@@ -306,7 +306,7 @@ export default function HomePage() {
               </p>
               <Link
                 href="/how-it-works"
-                className="mt-5 inline-flex items-center gap-2 rounded-md bg-dark px-5 py-3 text-xs font-bold text-white transition-colors hover:bg-black"
+                className="mt-5 inline-flex items-center gap-2 rounded-md bg-dark px-5 py-3 text-xs font-semibold text-white transition-colors hover:bg-black"
               >
                 Learn more&nbsp;&nbsp;→
               </Link>
@@ -361,7 +361,7 @@ export default function HomePage() {
             </h2>
             <Link
               href="/how-it-works"
-              className="text-xs font-bold text-ink underline-offset-4 hover:underline"
+              className="text-xs font-semibold text-ink underline-offset-4 hover:underline"
             >
               View full process&nbsp;&nbsp;→
             </Link>
@@ -391,7 +391,7 @@ export default function HomePage() {
             <div className="mt-4 flex flex-wrap items-center gap-7">
               <Link
                 href="/how-it-works#documentation"
-                className="inline-flex items-center gap-2 rounded-md bg-dark px-5 py-3 text-xs font-bold text-white transition-colors hover:bg-black"
+                className="inline-flex items-center gap-2 rounded-md bg-dark px-5 py-3 text-xs font-semibold text-white transition-colors hover:bg-black"
               >
                 Learn more&nbsp;&nbsp;→
               </Link>
@@ -447,7 +447,7 @@ export default function HomePage() {
             </p>
             <Link
               href="/about"
-              className="mt-5 inline-flex items-center gap-2 rounded-md border-[1.5px] border-ink bg-white px-5 py-3 text-xs font-extrabold text-ink transition-colors hover:bg-surface"
+              className="mt-5 inline-flex items-center gap-2 rounded-md border-[1.5px] border-ink bg-white px-5 py-3 text-xs font-semibold text-ink transition-colors hover:bg-surface"
             >
               Learn more about Hyprr Retail&nbsp;&nbsp;→
             </Link>
@@ -474,7 +474,7 @@ export default function HomePage() {
           >
             A wholesale supplier built for commercial buyers
           </h2>
-          <div className="mt-5 space-y-4 text-[0.9rem] leading-relaxed text-body">
+          <div className="mt-5 space-y-4 text-base leading-relaxed text-body">
             <p>
               Hyprr Retail is a B2B wholesale supplier and distributor serving
               the United States first, with the United Kingdom and other

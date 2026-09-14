@@ -78,7 +78,7 @@ export default function HowItWorksPage() {
           >
             How do MOQ and wholesale quantities work?
           </h2>
-          <div className="mt-4 space-y-4 text-[0.95rem] leading-relaxed text-body">
+          <div className="mt-4 space-y-4 text-base leading-relaxed text-body">
             <p>
               Minimum order quantities vary by brand, product and order — there
               is no universal MOQ. When you select models from the catalog, we

@@ -22,7 +22,7 @@ export default function CtaBand({
           <RequestCatalogButton variant="primary-lg" />
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 rounded-md border-[1.5px] border-white px-7 py-3.5 text-sm font-extrabold text-white transition-colors hover:bg-white/10"
+            className="inline-flex items-center gap-2 rounded-md border-[1.5px] border-white px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/10"
           >
             Contact Us
             <ArrowRightIcon className="h-4 w-4" />

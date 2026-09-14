@@ -73,14 +73,14 @@ export default function CategoryPage(props: CategoryPageProps) {
             <p className="mt-1.5 text-lg font-extrabold text-ink">
               {props.heroTagline}
             </p>
-            <p className="mt-2.5 max-w-lg text-[0.82rem] font-medium leading-relaxed text-body">
+            <p className="mt-2.5 max-w-lg text-[0.82rem] font-normal leading-relaxed text-body">
               {props.heroCopy}
             </p>
             <div className="mt-4 flex flex-wrap items-center gap-3">
               <RequestCatalogButton />
               <Link
                 href="/brands"
-                className="inline-flex items-center justify-center gap-2 rounded-md border-[1.5px] border-ink bg-white px-5 py-2.5 text-xs font-extrabold text-ink transition-colors hover:bg-surface"
+                className="inline-flex items-center justify-center gap-2 rounded-md border-[1.5px] border-ink bg-white px-5 py-2.5 text-xs font-semibold text-ink transition-colors hover:bg-surface"
               >
                 View All Brands&nbsp;&nbsp;→
               </Link>
@@ -121,7 +121,7 @@ export default function CategoryPage(props: CategoryPageProps) {
             </h2>
             <Link
               href="/brands"
-              className="text-xs font-bold text-ink underline-offset-4 hover:underline"
+              className="text-xs font-semibold text-ink underline-offset-4 hover:underline"
             >
               View all brands&nbsp;&nbsp;→
             </Link>
@@ -164,7 +164,7 @@ export default function CategoryPage(props: CategoryPageProps) {
                   />
                 </div>
                 <div className="flex items-center justify-between gap-3 px-4 py-3.5">
-                  <h3 className="text-[0.82rem] font-extrabold text-ink">
+                  <h3 className="text-[0.82rem] font-bold text-ink">
                     {card.title}
                   </h3>
                   <ArrowRightIcon className="h-4 w-4 text-ink" />
@@ -229,7 +229,7 @@ export default function CategoryPage(props: CategoryPageProps) {
           >
             {props.seoTitle}
           </h2>
-          <div className="mt-5 space-y-4 text-[0.9rem] leading-relaxed text-body">
+          <div className="mt-5 space-y-4 text-base leading-relaxed text-body">
             {props.seoContent}
           </div>
         </div>

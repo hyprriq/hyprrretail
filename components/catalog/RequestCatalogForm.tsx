@@ -15,7 +15,7 @@ import { ArrowRightIcon, CheckCircleIcon } from "../icons";
 const inputClasses =
   "w-full rounded-[5px] border border-line bg-white px-2.5 py-2 text-xs text-ink placeholder:text-faint focus:border-ink focus:outline-none";
 
-const labelClasses = "mb-1 block text-xs font-extrabold text-ink";
+const labelClasses = "mb-1 block text-xs font-semibold text-ink";
 
 interface FormState {
   status: "idle" | "submitting" | "success" | "error";
@@ -343,7 +343,7 @@ export default function RequestCatalogForm({
       <button
         type="submit"
         disabled={state.status === "submitting"}
-        className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-md bg-amber px-6 py-3.5 text-[0.9rem] font-extrabold text-ink transition-colors hover:bg-amber-hover disabled:cursor-not-allowed disabled:opacity-60"
+        className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-md bg-amber px-6 py-3.5 text-[0.9rem] font-semibold text-ink transition-colors hover:bg-amber-hover disabled:cursor-not-allowed disabled:opacity-60"
       >
         {state.status === "submitting" ? "Sending…" : "Send Request"}
         <ArrowRightIcon className="h-4 w-4" />

@@ -68,8 +68,8 @@ export default function ToolsHardwarePage() {
         "Global fulfillment",
         "Support for e-commerce sellers",
       ]}
-      splitImage="/images/cases.png"
-      splitImageAlt="Stack of red Milwaukee Packout tool cases"
+      splitImage="/images/stack-tools.jpg"
+      splitImageAlt="Shrink-wrapped pallet of Milwaukee M18 FUEL boxes in the warehouse"
       seoTitle="A wholesale tool supplier built for commercial buyers"
       seoContent={
         <>

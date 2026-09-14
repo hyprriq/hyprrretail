@@ -36,7 +36,7 @@ export default function Footer() {
           </div>
 
           <nav aria-label="Quick links">
-            <h2 className="text-sm font-bold text-ink">Quick Links</h2>
+            <h2 className="text-sm font-semibold text-ink">Quick Links</h2>
             <ul className="mt-4 space-y-2.5">
               {quickLinks.map((link) => (
                 <li key={link.href}>
@@ -52,7 +52,7 @@ export default function Footer() {
           </nav>
 
           <nav aria-label="Company">
-            <h2 className="text-sm font-bold text-ink">Company</h2>
+            <h2 className="text-sm font-semibold text-ink">Company</h2>
             <ul className="mt-4 space-y-2.5">
               {companyLinks.map((link) => (
                 <li key={link.href}>
@@ -68,7 +68,7 @@ export default function Footer() {
           </nav>
 
           <nav aria-label="Policies">
-            <h2 className="text-sm font-bold text-ink">Policies</h2>
+            <h2 className="text-sm font-semibold text-ink">Policies</h2>
             <ul className="mt-4 space-y-2.5">
               {LEGAL_LINKS.map((link) => (
                 <li key={link.href}>
