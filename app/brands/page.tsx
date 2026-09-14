@@ -25,7 +25,7 @@ export default function BrandsPage() {
       <section className="border-b border-line bg-surface">
         <div className="mx-auto max-w-7xl px-4 pb-12 pt-6 sm:px-6 lg:px-8">
           <Breadcrumbs items={[{ label: "Brands" }]} />
-          <h1 className="mt-6 text-4xl font-semibold tracking-[-0.02em] text-soft sm:text-5xl">
+          <h1 className="mt-6 text-4xl font-bold tracking-[-0.02em] text-soft sm:text-5xl">
             Brands
           </h1>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-body sm:text-lg">

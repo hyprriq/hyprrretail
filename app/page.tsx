@@ -115,8 +115,23 @@ export default function HomePage() {
         }}
       />
 
-      {/* Hero — approved board composition: copy left, commercial scene right */}
+      {/* Hero — approved board composition: full-bleed scene, copy over the hazy left */}
       <section className="relative overflow-hidden bg-surface">
+        {/* Ambient scene extension fills the band between text and subject */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-y-0 left-[34%] right-0 hidden overflow-hidden lg:block"
+        >
+          <Image
+            src="/images/hero-ambient.jpg"
+            alt=""
+            fill
+            sizes="66vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-surface/20" />
+        </div>
+        {/* Sharp subject anchored right at native proportions */}
         <div className="pointer-events-none absolute inset-y-0 right-0 hidden lg:block">
           <Image
             src="/images/hero-home.jpg"
@@ -124,23 +139,27 @@ export default function HomePage() {
             width={635}
             height={616}
             priority
-            className="h-full w-auto object-cover"
+            className="h-full w-auto object-cover [mask-image:linear-gradient(to_right,transparent,black_12%)]"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/60 to-transparent lg:w-40" />
         </div>
+        {/* Blend the scene into the light band beneath the HTML copy */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-y-0 left-[30%] hidden w-72 bg-gradient-to-r from-surface via-surface/80 to-transparent lg:block"
+        />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl py-10 lg:max-w-xl lg:py-14 xl:max-w-2xl">
-            <p className="text-[0.68rem] font-bold uppercase tracking-[0.14em] text-muted">
+            <p className="text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-muted">
               Genuine brands. Global supply.
             </p>
-            <h1 className="mt-3 text-4xl font-extrabold leading-[1.04] tracking-[-0.025em] sm:text-5xl">
+            <h1 className="mt-3 max-w-[560px] text-[38px] font-extrabold leading-[0.98] tracking-[-0.03em] sm:text-[44px] lg:text-[56px]">
               <span className="text-soft">Wholesale products</span>
               <br />
               for e-commerce
               <br />
               sellers and retailers.
             </h1>
-            <p className="mt-4 max-w-lg text-[0.95rem] font-medium leading-relaxed text-body">
+            <p className="mt-5 max-w-[520px] text-[0.95rem] font-normal leading-relaxed text-body">
               Genuine branded tools, hardware and outdoor products supplied
               through established commercial distribution channels.
             </p>
@@ -191,7 +210,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
           <h2
             id="featured-brands"
-            className="text-xl font-semibold text-soft"
+            className="text-xl font-bold text-soft"
           >
             Featured brands
           </h2>
@@ -273,7 +292,7 @@ export default function HomePage() {
             <div className="lg:pl-6">
               <h2
                 id="proposition"
-                className="text-3xl font-semibold leading-[1.08] tracking-[-0.02em] text-soft"
+                className="text-3xl font-bold leading-[1.08] tracking-[-0.02em] text-soft"
               >
                 Trusted distribution.
                 <br />
@@ -337,7 +356,7 @@ export default function HomePage() {
       >
         <div className="mx-auto max-w-7xl px-4 py-7 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between gap-4">
-            <h2 id="how-it-works" className="text-xl font-semibold text-soft">
+            <h2 id="how-it-works" className="text-xl font-bold text-soft">
               How it works
             </h2>
             <Link
@@ -417,7 +436,7 @@ export default function HomePage() {
           <div className="px-4 py-8 sm:px-6 lg:px-8">
             <h2
               id="wholesale-band"
-              className="max-w-xl text-3xl font-semibold leading-[1.1] tracking-[-0.02em] text-soft"
+              className="max-w-xl text-3xl font-bold leading-[1.1] tracking-[-0.02em] text-soft"
             >
               Wholesale branded products for e-commerce sellers and retailers.
             </h2>
@@ -451,7 +470,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
           <h2
             id="wholesale-editorial"
-            className="text-2xl font-semibold tracking-[-0.02em] text-soft"
+            className="text-2xl font-bold tracking-[-0.02em] text-soft"
           >
             A wholesale supplier built for commercial buyers
           </h2>
@@ -519,7 +538,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
           <h2
             id="faq-heading"
-            className="text-2xl font-semibold tracking-[-0.02em] text-soft"
+            className="text-2xl font-bold tracking-[-0.02em] text-soft"
           >
             Frequently asked questions
           </h2>

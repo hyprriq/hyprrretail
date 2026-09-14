@@ -63,7 +63,7 @@ export default function CategoryPage(props: CategoryPageProps) {
             <p className="text-[0.68rem] font-extrabold uppercase tracking-[0.14em] text-body">
               {props.eyebrow}
             </p>
-            <h1 className="mt-1.5 text-4xl font-semibold leading-[1.05] tracking-[-0.02em] text-soft">
+            <h1 className="mt-1.5 text-4xl font-bold leading-[1.05] tracking-[-0.02em] text-soft">
               {props.heroTitle}
             </h1>
             <p className="mt-1.5 text-lg font-extrabold text-ink">
@@ -111,7 +111,7 @@ export default function CategoryPage(props: CategoryPageProps) {
           <div className="flex items-center justify-between gap-4">
             <h2
               id={`brands-${props.slug}`}
-              className="text-xl font-semibold text-soft"
+              className="text-xl font-bold text-soft"
             >
               Featured brands in {props.name}
             </h2>
@@ -140,7 +140,7 @@ export default function CategoryPage(props: CategoryPageProps) {
         <div className="mx-auto max-w-7xl px-4 pt-6 sm:px-6 lg:px-8">
           <h2
             id={`product-categories-${props.slug}`}
-            className="text-xl font-semibold text-soft"
+            className="text-xl font-bold text-soft"
           >
             Product categories
           </h2>
@@ -180,7 +180,7 @@ export default function CategoryPage(props: CategoryPageProps) {
           <div className="rounded bg-white p-7">
             <h2
               id={`split-${props.slug}`}
-              className="text-3xl font-semibold leading-[1.1] tracking-[-0.02em] text-soft"
+              className="text-3xl font-bold leading-[1.1] tracking-[-0.02em] text-soft"
             >
               {props.splitTitle}
             </h2>
@@ -221,7 +221,7 @@ export default function CategoryPage(props: CategoryPageProps) {
         <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
           <h2
             id={`seo-${props.slug}`}
-            className="text-2xl font-semibold tracking-[-0.02em] text-soft"
+            className="text-2xl font-bold tracking-[-0.02em] text-soft"
           >
             {props.seoTitle}
           </h2>
@@ -239,7 +239,7 @@ export default function CategoryPage(props: CategoryPageProps) {
         <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
           <h2
             id={`faq-${props.slug}`}
-            className="text-2xl font-semibold tracking-[-0.02em] text-soft"
+            className="text-2xl font-bold tracking-[-0.02em] text-soft"
           >
             {props.name} — frequently asked questions
           </h2>

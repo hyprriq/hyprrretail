@@ -40,10 +40,10 @@ export default function HowItWorksPage() {
       <section className="border-b border-line bg-surface">
         <div className="mx-auto max-w-7xl px-4 pb-12 pt-6 sm:px-6 lg:px-8">
           <Breadcrumbs items={[{ label: "How It Works" }]} />
-          <h1 className="mt-6 text-4xl font-semibold tracking-[-0.02em] text-soft sm:text-5xl">
+          <h1 className="mt-6 text-4xl font-bold tracking-[-0.02em] text-soft sm:text-5xl">
             How It Works
           </h1>
-          <p className="mt-2 text-xl font-semibold text-soft">
+          <p className="mt-2 text-xl font-bold text-soft">
             A simple process. Real business opportunities.
           </p>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-body">
