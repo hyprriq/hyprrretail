@@ -10,12 +10,12 @@ import { CATEGORIES, brandsByCategory } from "@/lib/brands";
 export const metadata: Metadata = {
   title: "Wholesale Brands Directory",
   description:
-    "Browse the branded wholesale range available through Hyprr Retail: Milwaukee, Makita, Stanley, Knipex, Petzl, Thule, LEKI, KASK and more — genuine products for e-commerce sellers and retailers.",
+    "Browse the branded wholesale range available through Hyprr Retail: Milwaukee, Makita, Stanley, Knipex, Petzl, Thule, LEKI, KASK and more — branded wholesale for e-commerce sellers and retailers.",
   alternates: { canonical: "/brands" },
   openGraph: {
     title: "Wholesale Brands Directory | Hyprr Retail",
     description:
-      "Genuine branded tools, hardware and outdoor products available in wholesale quantities.",
+      "Branded tools, hardware and outdoor products available in wholesale quantities through established channels.",
   },
 };
 
@@ -29,7 +29,7 @@ export default function BrandsPage() {
             Brands
           </h1>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-body sm:text-lg">
-            The genuine branded products currently available through Hyprr
+            The branded products currently available through Hyprr
             Retail, supplied in wholesale quantities through established
             commercial distribution channels. Brands are added as our supply
             relationships grow — if you need one that isn&apos;t listed,

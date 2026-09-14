@@ -13,12 +13,12 @@ import {
 export const metadata: Metadata = {
   title: "About Hyprr Retail — B2B Wholesale Distributor",
   description:
-    "Hyprr Retail is a B2B wholesale distributor supplying genuine branded tools, hardware, sports and outdoor products to e-commerce sellers, retailers and wholesale buyers.",
+    "Hyprr Retail is a B2B wholesale distributor supplying branded tools, hardware, sports and outdoor products through established commercial distribution channels to e-commerce sellers, retailers and wholesale buyers.",
   alternates: { canonical: "/about" },
   openGraph: {
     title: "About Hyprr Retail",
     description:
-      "A B2B wholesale distributor of genuine branded products for e-commerce sellers and retailers.",
+      "A B2B wholesale distributor of branded products for e-commerce sellers and retailers.",
   },
 };
 
@@ -32,7 +32,7 @@ export default function AboutPage() {
             About Hyprr Retail
           </h1>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-body sm:text-lg">
-            A B2B wholesale operation focused on one thing: supplying genuine
+            A B2B wholesale operation focused on one thing: supplying
             branded products to commercial buyers through a clear, documented
             process.
           </p>
@@ -81,8 +81,8 @@ export default function AboutPage() {
             {[
               {
                 icon: ShieldCheckIcon,
-                title: "Genuine products only",
-                copy: "Branded products obtained through established, authorized commercial channels.",
+                title: "Established supply channels",
+                copy: "Products obtained through established commercial distribution channels and brand-authorized distributors.",
               },
               {
                 icon: BoxesIcon,

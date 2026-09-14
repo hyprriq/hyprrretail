@@ -11,12 +11,12 @@ import {
 export const metadata: Metadata = {
   title: "Wholesale Tools & Hardware Supplier",
   description:
-    "Genuine branded power tools, hand tools and hardware in wholesale quantities. Milwaukee, Makita, Stanley, Knipex and more for e-commerce sellers, retailers and wholesale buyers.",
+    "Branded power tools, hand tools and hardware in wholesale quantities through established distribution channels. Milwaukee, Makita, Stanley, Knipex and more for e-commerce sellers, retailers and wholesale buyers.",
   alternates: { canonical: "/tools-hardware" },
   openGraph: {
     title: "Wholesale Tools & Hardware Supplier | Hyprr Retail",
     description:
-      "Genuine branded power tools, hand tools and hardware in wholesale quantities for e-commerce sellers and retailers.",
+      "Branded power tools, hand tools and hardware in wholesale quantities for e-commerce sellers and retailers.",
   },
 };
 
@@ -28,11 +28,11 @@ export default function ToolsHardwarePage() {
       eyebrow="Professional tools. Real business."
       heroTitle="Tools & Hardware"
       heroTagline="Trusted brands for demanding businesses."
-      heroCopy="We supply genuine branded power tools, hand tools, accessories and hardware to e-commerce sellers, retailers and wholesale buyers."
+      heroCopy="We supply branded power tools, hand tools, accessories and hardware to e-commerce sellers, retailers and wholesale buyers."
       heroImage="/images/hero-tools.jpg"
       heroImageAlt="Milwaukee drill driving into steel on a workshop bench beside Makita, Stanley and Knipex tools"
       chips={[
-        { icon: ShieldCheckIcon, label: "Genuine products" },
+        { icon: ShieldCheckIcon, label: "Branded products" },
         { icon: TagIcon, label: "Competitive pricing" },
         { icon: BoxesIcon, label: "Wide range & availability" },
         { icon: GlobeIcon, label: "Global shipping" },
@@ -124,7 +124,7 @@ export default function ToolsHardwarePage() {
         {
           question: "Can Amazon sellers buy Milwaukee or Makita wholesale?",
           answer:
-            "Yes. E-commerce sellers are our primary customers, and we supply genuine Milwaukee, Makita and other branded tools in wholesale quantities with commercial invoices and shipping documentation. Where applicable, we can also provide marketplace documentation support before a purchase order — no approval outcome is ever guaranteed.",
+            "Yes. E-commerce sellers are our primary customers, and we supply Milwaukee, Makita and other branded tools in wholesale quantities with commercial invoices and shipping documentation. Where applicable, we can also provide marketplace documentation support before a purchase order — no approval outcome is ever guaranteed.",
         },
         {
           question: "Do you publish tool pricing on the website?",

@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import RequestCatalogForm from "@/components/catalog/RequestCatalogForm";
+import ContactForm from "@/components/ContactForm";
+import RequestCatalogButton from "@/components/catalog/RequestCatalogButton";
 import { ChatIcon, ClipboardIcon, MailIcon } from "@/components/icons";
 
 export const metadata: Metadata = {
-  title: "Contact Us — Request a Catalog or Seller Support",
+  title: "Contact Us — Wholesale & Business Enquiries",
   description:
-    "Contact Hyprr Retail to request a wholesale catalog, ask about brands and model numbers, or get seller support for Amazon, Walmart and other marketplaces.",
+    "Contact Hyprr Retail with wholesale enquiries, brand and model availability questions, shipping questions or seller support — or request our wholesale catalog.",
   alternates: { canonical: "/contact" },
   openGraph: {
     title: "Contact Hyprr Retail",
     description:
-      "Request a wholesale catalog or ask about brands, models, MOQ and shipping.",
+      "Wholesale enquiries, brand and product availability, shipping questions and seller support.",
   },
 };
 
@@ -25,9 +26,9 @@ export default function ContactPage() {
             Contact Us
           </h1>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-body sm:text-lg">
-            Request our catalog, ask about specific brands or model numbers,
-            or get support as an e-commerce seller. Tell us what you need and
-            we&apos;ll reply by email, usually within one business day.
+            Ask about brands, models, shipping or anything else — we reply by
+            email, usually within one business day. For full catalog access,
+            use Request Catalog.
           </p>
         </div>
       </section>
@@ -41,9 +42,9 @@ export default function ContactPage() {
             <ul className="mt-6 space-y-6">
               {[
                 {
-                  icon: ClipboardIcon,
-                  title: "Catalog requests",
-                  copy: "Access our latest catalog, brand list and availability. Select the brands you're interested in using the form — multiple selections welcome.",
+                  icon: MailIcon,
+                  title: "Brand & model enquiries",
+                  copy: "Wondering whether we carry a brand or can supply a specific model? Ask — we'll answer honestly, including when we can't.",
                 },
                 {
                   icon: ChatIcon,
@@ -51,9 +52,9 @@ export default function ContactPage() {
                   copy: "Questions about MOQ, wholesale pricing, marketplace documentation support or the ordering process for Amazon, Walmart and other channels.",
                 },
                 {
-                  icon: MailIcon,
-                  title: "Brand & model enquiries",
-                  copy: "Already know the model numbers you want? Include them in the form and we'll check availability and pricing directly.",
+                  icon: ClipboardIcon,
+                  title: "Shipping & business enquiries",
+                  copy: "Shipping options and timing, distribution enquiries, or anything else commercial — send a message and we'll route it to the right person.",
                 },
               ].map((item) => (
                 <li key={item.title} className="flex gap-4">
@@ -71,23 +72,30 @@ export default function ContactPage() {
                 </li>
               ))}
             </ul>
-            <p className="mt-8 rounded-card border border-line bg-surface p-5 text-sm leading-relaxed text-body">
-              We respond to every genuine business enquiry. The more you tell
-              us about your business, marketplace and target brands, the faster
-              we can send relevant catalog and availability information.
-            </p>
+            <div className="mt-8 rounded-card border border-line bg-surface p-5">
+              <h3 className="text-sm font-bold text-ink">
+                Looking for the catalog?
+              </h3>
+              <p className="mt-1.5 text-sm leading-relaxed text-body">
+                For catalog requests, brand and model availability and
+                wholesale enquiries with order details, use the catalog form —
+                it collects everything we need to quote you accurately.
+              </p>
+              <div className="mt-4">
+                <RequestCatalogButton />
+              </div>
+            </div>
           </div>
           <div className="rounded-card border border-line bg-white p-6 sm:p-8 lg:col-span-3">
             <h2 className="text-xl font-bold tracking-tight text-ink">
-              Request Our Catalog
+              Send us a message
             </h2>
             <p className="mt-2 text-sm leading-relaxed text-body">
-              Get access to our latest product catalog, brand list and current
-              availability. Tell us a little about your business and we&apos;ll
-              send it to you.
+              A quick question doesn&apos;t need a long form. Tell us what you
+              need and we&apos;ll get back to you.
             </p>
             <div className="mt-6">
-              <RequestCatalogForm />
+              <ContactForm />
             </div>
           </div>
         </div>

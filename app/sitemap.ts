@@ -1,6 +1,10 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/site";
 
+// Update when page content meaningfully changes — a stable date is more
+// truthful to crawlers than stamping every build as "just modified".
+const LAST_CONTENT_UPDATE = new Date("2026-09-14");
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes: { path: string; priority: number }[] = [
     { path: "/", priority: 1 },
@@ -19,7 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return routes.map((route) => ({
     url: `${SITE_URL}${route.path === "/" ? "" : route.path}`,
-    lastModified: new Date(),
+    lastModified: LAST_CONTENT_UPDATE,
     changeFrequency: "monthly",
     priority: route.priority,
   }));

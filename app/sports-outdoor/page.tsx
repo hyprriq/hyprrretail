@@ -11,12 +11,12 @@ import {
 export const metadata: Metadata = {
   title: "Wholesale Sports & Outdoor Products Supplier",
   description:
-    "Genuine branded climbing, hiking and outdoor equipment in wholesale quantities. Petzl, Thule, LEKI, KASK, La Sportiva and more for e-commerce sellers and retailers.",
+    "Branded climbing, hiking and outdoor equipment in wholesale quantities through established distribution channels. Petzl, Thule, LEKI, KASK, La Sportiva and more for e-commerce sellers and retailers.",
   alternates: { canonical: "/sports-outdoor" },
   openGraph: {
     title: "Wholesale Sports & Outdoor Products Supplier | Hyprr Retail",
     description:
-      "Genuine branded climbing, hiking and outdoor equipment in wholesale quantities for e-commerce sellers and retailers.",
+      "Branded climbing, hiking and outdoor equipment in wholesale quantities for e-commerce sellers and retailers.",
   },
 };
 
@@ -28,12 +28,12 @@ export default function SportsOutdoorPage() {
       eyebrow="Outdoor brands. Commercial supply."
       heroTitle="Sports & Outdoor"
       heroTagline="Equipment people trust outdoors."
-      heroCopy="We supply genuine branded climbing, hiking and outdoor products — from trekking poles to helmets to backpacks — to e-commerce sellers, retailers and wholesale buyers."
+      heroCopy="We supply branded climbing, hiking and outdoor products — from trekking poles to helmets to backpacks — to e-commerce sellers, retailers and wholesale buyers."
       heroImage="/images/hero-sports-collage.jpg"
       heroImageAlt="Outdoor lifestyle collage: hikers on a ridge, lakeside camping gear, mountain biking and fishing at sunset"
       heroMobilePosition="object-[10%_center]"
       chips={[
-        { icon: ShieldCheckIcon, label: "Genuine products" },
+        { icon: ShieldCheckIcon, label: "Branded products" },
         { icon: TagIcon, label: "Competitive pricing" },
         { icon: BoxesIcon, label: "Wide range & availability" },
         { icon: GlobeIcon, label: "Global shipping" },
@@ -61,7 +61,7 @@ export default function SportsOutdoorPage() {
         },
       ]}
       splitTitle="Gear your customers already trust."
-      splitCopy="Outdoor buyers know the brands they want. We help retailers and e-commerce sellers stock genuine Petzl, Thule, LEKI, KASK, La Sportiva and other respected outdoor names — with wholesale terms, documentation and shipping that fit commercial orders."
+      splitCopy="Outdoor buyers know the brands they want. We help retailers and e-commerce sellers stock Petzl, Thule, LEKI, KASK, La Sportiva and other respected outdoor names — with wholesale terms, documentation and shipping that fit commercial orders."
       splitChecklist={[
         "Authentic branded products",
         "Wholesale quantities",
@@ -79,7 +79,7 @@ export default function SportsOutdoorPage() {
             buyers in the United States, the United Kingdom and international
             markets. The range spans climbing equipment, hiking and trekking
             gear, outdoor safety equipment, backpacks and bags, outdoor
-            footwear and accessories — all genuine branded products obtained
+            footwear and accessories — all branded products obtained
             through established commercial distribution channels.
           </p>
           <p>
@@ -119,7 +119,7 @@ export default function SportsOutdoorPage() {
         {
           question: "Do you supply climbing and safety equipment wholesale?",
           answer:
-            "Yes. We supply genuine climbing hardware, harnesses, helmets, ropes and related safety equipment from brands such as Petzl, Edelrid, CAMP, Kong Italy and KASK. All products are genuine and sourced through established commercial channels.",
+            "Yes. We supply genuine climbing hardware, harnesses, helmets, ropes and related safety equipment from brands such as Petzl, Edelrid, CAMP, Kong Italy and KASK, sourced through established commercial channels.",
         },
         {
           question: "Can e-commerce sellers buy outdoor gear wholesale?",

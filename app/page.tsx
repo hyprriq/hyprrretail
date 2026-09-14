@@ -54,9 +54,9 @@ const HOME_FAQS: Faq[] = [
       "Yes. Alongside e-commerce sellers, we supply retail stores, online retailers and wholesale buyers. If you run a physical or online retail business and want access to branded tools, hardware or outdoor products at wholesale terms, request our catalog.",
   },
   {
-    question: "Do you supply genuine branded products?",
+    question: "How does Hyprr Retail source branded products?",
     answer:
-      "Yes. Every product we supply is a genuine branded product obtained through established commercial supply channels and brand-authorized distributors. We do not deal in replicas, grey-market fakes or unbranded substitutes.",
+      "Hyprr Retail works through established commercial distribution channels and brand-authorized distributors to supply branded products to qualified wholesale buyers. Availability, MOQ, pricing and applicable commercial documentation are confirmed before an order is committed.",
   },
   {
     question: "How do I request a catalog?",
@@ -153,7 +153,7 @@ export default function HomePage() {
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               <TrustChips
                 chips={[
-                  { icon: ShieldCheckIcon, label: "Genuine Products" },
+                  { icon: ShieldCheckIcon, label: "Branded Products" },
                   { icon: BoxesIcon, label: "Wholesale Quantities" },
                   { icon: DocumentIcon, label: "Commercial Documentation" },
                   { icon: GlobeIcon, label: "Global Shipping" },
@@ -165,7 +165,7 @@ export default function HomePage() {
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl py-10 lg:max-w-xl lg:pb-32 lg:pt-16 xl:max-w-2xl">
             <p className="text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-muted">
-              Genuine brands. Global supply.
+              Established brands. Global supply.
             </p>
             <h1 className="mt-3 max-w-[560px] text-[38px] font-extrabold leading-[0.98] tracking-[-0.04em] sm:text-[44px] lg:text-[56px]">
               <span className="text-soft">Wholesale products</span>
@@ -175,8 +175,9 @@ export default function HomePage() {
               sellers and retailers.
             </h1>
             <p className="mt-5 max-w-[520px] text-[0.95rem] font-normal leading-relaxed text-body">
-              Genuine branded tools, hardware and outdoor products supplied
-              through established commercial distribution channels.
+              Branded tools, hardware and outdoor products supplied through
+              established commercial distribution channels and
+              brand-authorized distributors.
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-3">
               <RequestCatalogButton variant="primary-lg" />
@@ -208,7 +209,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
           <TrustChips
             chips={[
-              { icon: ShieldCheckIcon, label: "Genuine Products" },
+              { icon: ShieldCheckIcon, label: "Branded Products" },
               { icon: BoxesIcon, label: "Wholesale Quantities" },
               { icon: DocumentIcon, label: "Commercial Documentation" },
               { icon: GlobeIcon, label: "Global Shipping" },
@@ -245,7 +246,7 @@ export default function HomePage() {
             </Link>
           </div>
           <p className="sr-only">
-            We supply genuine products from established tool, hardware and
+            We supply products from established tool, hardware and
             outdoor brands, including Milwaukee, Makita, Knipex, Thule, LEKI
             and Stanley, with the full brand directory on our Brands page.
           </p>
@@ -315,7 +316,7 @@ export default function HomePage() {
               </h2>
               <p className="mt-4 max-w-lg text-sm font-medium leading-relaxed text-body">
                 We work with established commercial distribution channels to
-                supply genuine branded products to e-commerce sellers,
+                supply branded products to e-commerce sellers,
                 retailers and wholesale buyers. All orders are supported with
                 the appropriate commercial documentation where applicable.
               </p>
@@ -331,8 +332,8 @@ export default function HomePage() {
             {[
               {
                 icon: ShieldCheckIcon,
-                title: "Authentic products",
-                copy: "Genuine branded products from authorized distribution channels.",
+                title: "Established supply channels",
+                copy: "Products obtained through established commercial distribution channels and brand-authorized distributors.",
               },
               {
                 icon: DocumentIcon,
@@ -471,7 +472,7 @@ export default function HomePage() {
             </h2>
             <p className="mt-3 max-w-xl text-[0.82rem] font-medium leading-relaxed text-body">
               Hyprr Retail is a wholesale distributor in the USA, supplying
-              genuine branded tools, hardware and outdoor products to
+              branded tools, hardware and outdoor products to
               e-commerce sellers, retailers and other wholesale buyers.
             </p>
             <Link
@@ -514,7 +515,7 @@ export default function HomePage() {
             </p>
             <p>
               For Amazon sellers and Walmart sellers, working with a wholesale
-              distributor that supplies genuine branded inventory and proper
+              distributor that supplies branded inventory and proper
               commercial documentation matters. Marketplace sellers need real
               invoices, traceable supply and clear commercial terms. That is
               exactly how we operate: every order runs through a purchase-order

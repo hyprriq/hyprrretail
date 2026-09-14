@@ -27,7 +27,7 @@ export default function Footer() {
           <div className="col-span-2 md:col-span-3 lg:col-span-1">
             <Logo />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted">
-              B2B wholesale distribution of genuine branded tools, hardware,
+              B2B wholesale distribution of branded tools, hardware,
               sports and outdoor products for e-commerce sellers and retailers.
             </p>
             <div className="mt-5">

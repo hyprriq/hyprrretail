@@ -17,7 +17,7 @@ export default function TermsPage() {
         {
           heading: "About this website",
           paragraphs: [
-            "This website provides information about the wholesale supply of genuine branded products by Hyprr Retail to business customers. Content on this site is informational: product availability, minimum order quantities, pricing and shipping options are confirmed individually for each enquiry and are not offers capable of acceptance in themselves.",
+            "This website provides information about the wholesale supply of branded products by Hyprr Retail to business customers. Content on this site is informational: product availability, minimum order quantities, pricing and shipping options are confirmed individually for each enquiry and are not offers capable of acceptance in themselves.",
           ],
         },
         {
