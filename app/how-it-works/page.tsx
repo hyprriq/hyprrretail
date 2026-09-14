@@ -173,16 +173,32 @@ export default function HowItWorksPage() {
                   alt: "Redacted express bill of lading for a sea-freight wholesale shipment from Italy to New York",
                   label: "Express Bill of Lading",
                   sub: "Sea freight, Genova → New York",
+                  aspect: "aspect-[1309/1850]",
                 },
                 {
                   src: "/images/doc-ship-notice.jpg",
                   alt: "Redacted ship departure notice for an export consignment from Genova to Newark",
                   label: "Ship Departure Notice",
                   sub: "Export forwarding, Genova → Newark",
+                  aspect: "aspect-[1309/1850]",
+                },
+                {
+                  src: "/images/doc-invoice-items.jpg",
+                  alt: "Redacted commercial invoice line items for a Knipex and Milwaukee wholesale order with air shipping to the USA",
+                  label: "Commercial Invoice — Line Items",
+                  sub: "Knipex & Milwaukee wholesale order",
+                  aspect: "aspect-[977/807]",
+                },
+                {
+                  src: "/images/doc-brand-approvals.jpg",
+                  alt: "Redacted Amazon Seller Central screenshots showing approved brand selling applications for Milwaukee, KNIPEX and LEKI",
+                  label: "Amazon Brand Approvals",
+                  sub: "Milwaukee · KNIPEX · LEKI — seller account",
+                  aspect: "aspect-[902/700]",
                 },
               ].map((doc) => (
                 <figure key={doc.src} className="overflow-hidden rounded border border-line bg-white">
-                  <div className="relative aspect-[1309/1850]">
+                  <div className={`relative ${doc.aspect}`}>
                     <Image
                       src={doc.src}
                       alt={doc.alt}
@@ -199,9 +215,10 @@ export default function HowItWorksPage() {
               ))}
             </div>
             <p className="mt-4 text-[0.7rem] leading-relaxed text-faint">
-              Redacted for confidentiality. Documentation varies by order,
-              destination and marketplace — ask us what accompanies a typical
-              order for your channel.
+              Redacted for confidentiality. Marketplace screenshots are from
+              our own seller applications — approval decisions always rest
+              with the marketplace. Documentation varies by order, destination
+              and channel; ask us what accompanies a typical order for yours.
             </p>
             <div className="mt-4">
               <Link
