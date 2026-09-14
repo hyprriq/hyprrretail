@@ -119,10 +119,10 @@ export default function HomePage() {
       <section className="relative overflow-hidden bg-surface">
         <div className="pointer-events-none absolute inset-y-0 right-0 hidden lg:block">
           <Image
-            src="/images/hero-home.png"
-            alt="Outdoor adventurer with a Thule backpack beside Milwaukee tools, a helmet and hiking gear in the mountains"
-            width={610}
-            height={488}
+            src="/images/hero-home.jpg"
+            alt="Hiker with a Thule backpack beside a Milwaukee tool case, KASK helmet, La Sportiva footwear and trekking poles in the mountains"
+            width={635}
+            height={616}
             priority
             className="h-full w-auto object-cover"
           />
@@ -155,11 +155,11 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-          {/* Mobile hero image */}
-          <div className="relative -mx-4 aspect-[5/4] sm:-mx-6 lg:hidden">
+          {/* Mobile hero image — dedicated portrait crop keeping hiker + products */}
+          <div className="relative -mx-4 aspect-[390/616] max-h-[70vh] w-auto sm:-mx-6 lg:hidden">
             <Image
-              src="/images/hero-home.png"
-              alt=""
+              src="/images/hero-home-mobile.jpg"
+              alt="Hiker with a Thule backpack beside a Milwaukee tool case, KASK helmet and La Sportiva footwear"
               fill
               priority
               sizes="100vw"
