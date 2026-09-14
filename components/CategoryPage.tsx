@@ -25,6 +25,10 @@ export interface CategoryPageProps {
   heroCopy: string;
   heroImage: string;
   heroImageAlt: string;
+  /** object-position class for the mobile crop, e.g. "object-[70%_center]". */
+  heroMobilePosition?: string;
+  /** object-position class for the desktop cover crop. */
+  heroDesktopPosition?: string;
   chips: TrustChip[];
   productCategories: ProductCategoryCard[];
   splitTitle: string;
@@ -44,16 +48,16 @@ export default function CategoryPage(props: CategoryPageProps) {
     <>
       {/* Hero band — board composition: breadcrumb + copy left, imagery right */}
       <section className="relative overflow-hidden bg-surface-2">
-        <div className="pointer-events-none absolute inset-y-0 right-0 hidden lg:block">
+        <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[45vw] lg:block">
           <Image
             src={props.heroImage}
             alt={props.heroImageAlt}
-            width={680}
-            height={398}
+            fill
             priority
-            className="h-full w-auto object-cover"
+            sizes="45vw"
+            className={`object-cover ${props.heroDesktopPosition ?? "object-center"}`}
           />
-          <div className="absolute inset-0 w-40 bg-gradient-to-r from-surface-2 via-surface-2/60 to-transparent" />
+          <div className="absolute inset-y-0 left-0 w-40 bg-gradient-to-r from-surface-2 via-surface-2/60 to-transparent" />
         </div>
         <div className="relative mx-auto max-w-7xl px-4 pt-5 sm:px-6 lg:px-8">
           <Breadcrumbs
@@ -82,14 +86,14 @@ export default function CategoryPage(props: CategoryPageProps) {
               </Link>
             </div>
           </div>
-          <div className="relative -mx-4 aspect-[16/9] sm:-mx-6 lg:hidden">
+          <div className="relative -mx-4 aspect-[4/5] max-h-[60vh] w-auto sm:-mx-6 sm:aspect-[16/9] lg:hidden">
             <Image
               src={props.heroImage}
               alt=""
               fill
               priority
               sizes="100vw"
-              className="object-cover"
+              className={`object-cover ${props.heroMobilePosition ?? "object-center"}`}
             />
           </div>
         </div>

@@ -29,8 +29,8 @@ export default function ToolsHardwarePage() {
       heroTitle="Tools & Hardware"
       heroTagline="Trusted brands for demanding businesses."
       heroCopy="We supply genuine branded power tools, hand tools, accessories and hardware to e-commerce sellers, retailers and wholesale buyers."
-      heroImage="/images/hero-tools.png"
-      heroImageAlt="Milwaukee professional drill in use on site"
+      heroImage="/images/hero-tools.jpg"
+      heroImageAlt="Milwaukee drill driving into steel on a workshop bench beside Makita, Stanley and Knipex tools"
       chips={[
         { icon: ShieldCheckIcon, label: "Genuine products" },
         { icon: TagIcon, label: "Competitive pricing" },
@@ -40,23 +40,23 @@ export default function ToolsHardwarePage() {
       productCategories={[
         {
           title: "Power Tools",
-          image: "/images/cat-power.png",
-          alt: "Professional cordless power drill",
+          image: "/images/cat-power.jpg",
+          alt: "Milwaukee cordless drill in use",
         },
         {
           title: "Hand Tools",
-          image: "/images/cat-hand.png",
-          alt: "Set of professional wrenches",
+          image: "/images/cat-hand.jpg",
+          alt: "Knipex pliers with wrenches and hand tools",
         },
         {
           title: "Accessories",
-          image: "/images/cat-acc.png",
-          alt: "Abrasive discs and tool accessories",
+          image: "/images/cat-acc.jpg",
+          alt: "Makita abrasive discs and accessories",
         },
         {
           title: "Hardware & Fixings",
-          image: "/images/cat-hw.png",
-          alt: "Screws and fixings hardware",
+          image: "/images/cat-hw.jpg",
+          alt: "Screws, anchors and fixings hardware",
         },
       ]}
       splitTitle="Built for businesses that build more."

@@ -245,15 +245,15 @@ export default function HomePage() {
               href: "/tools-hardware",
               title: "Tools & Hardware",
               copy: "Professional power tools, hand tools, accessories and hardware from leading brands.",
-              image: "/images/card-tools.png",
-              alt: "Milwaukee professional power tool close-up",
+              image: "/images/card-tools.jpg",
+              alt: "Milwaukee M18 FUEL drill on a workshop bench",
             },
             {
               href: "/sports-outdoor",
               title: "Sports & Outdoor",
               copy: "Climbing, hiking, outdoor equipment and footwear for retailers and e-commerce sellers.",
-              image: "/images/card-sports.png",
-              alt: "Hiker in a yellow jacket looking across snowy mountains",
+              image: "/images/card-sports.jpg",
+              alt: "Hiker in a yellow jacket with a Thule backpack and LEKI poles above an alpine lake",
             },
           ].map((card) => (
             <Link
