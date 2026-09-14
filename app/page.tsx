@@ -298,7 +298,7 @@ export default function HomePage() {
                 <br />
                 Real opportunities.
               </h2>
-              <p className="mt-4 max-w-lg text-sm leading-relaxed text-body">
+              <p className="mt-4 max-w-lg text-sm font-medium leading-relaxed text-body">
                 We work with established commercial distribution channels to
                 supply genuine branded products to e-commerce sellers,
                 retailers and wholesale buyers. All orders are supported with
@@ -339,7 +339,7 @@ export default function HomePage() {
                 <item.icon className="h-7 w-7 shrink-0 text-ink" />
                 <div>
                   <h3 className="text-sm font-bold text-ink">{item.title}</h3>
-                  <p className="mt-0.5 text-[0.8rem] leading-relaxed text-body">
+                  <p className="mt-0.5 text-[0.8rem] font-medium leading-relaxed text-body">
                     {item.copy}
                   </p>
                 </div>
@@ -382,7 +382,7 @@ export default function HomePage() {
             <h2 className="text-lg font-bold text-ink">
               Support for e-commerce sellers
             </h2>
-            <p className="mt-3 max-w-lg text-[0.82rem] leading-relaxed text-body">
+            <p className="mt-3 max-w-lg text-[0.82rem] font-medium leading-relaxed text-body">
               We can provide documentation support for Amazon, Walmart and
               other marketplace sellers who need brand or product permission
               documentation. Conditions apply — and no supplier can guarantee
@@ -452,7 +452,7 @@ export default function HomePage() {
             >
               Wholesale branded products for e-commerce sellers and retailers.
             </h2>
-            <p className="mt-3 max-w-xl text-[0.82rem] leading-relaxed text-body">
+            <p className="mt-3 max-w-xl text-[0.82rem] font-medium leading-relaxed text-body">
               Hyprr Retail is a wholesale distributor in the USA, supplying
               genuine branded tools, hardware and outdoor products to
               e-commerce sellers, retailers and other wholesale buyers.

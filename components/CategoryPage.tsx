@@ -188,7 +188,7 @@ export default function CategoryPage(props: CategoryPageProps) {
             >
               {props.splitTitle}
             </h2>
-            <p className="mt-4 text-[0.82rem] leading-relaxed text-body">
+            <p className="mt-4 text-[0.82rem] font-medium leading-relaxed text-body">
               {props.splitCopy}
             </p>
             <div className="mt-5">
