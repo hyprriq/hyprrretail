@@ -59,7 +59,7 @@ export default function CategoryPage(props: CategoryPageProps) {
           <Breadcrumbs
             items={[{ label: "Categories" }, { label: props.name }]}
           />
-          <div className="max-w-2xl pb-8 pt-6 lg:pb-10">
+          <div className="max-w-2xl pb-8 pt-6 lg:max-w-lg lg:pb-10 xl:max-w-2xl">
             <p className="text-[0.68rem] font-extrabold uppercase tracking-[0.14em] text-body">
               {props.eyebrow}
             </p>

@@ -20,7 +20,7 @@ export default function LegalPage({
       <section className="border-b border-line bg-surface">
         <div className="mx-auto max-w-4xl px-4 pb-10 pt-6 sm:px-6 lg:px-8">
           <Breadcrumbs items={[{ label: title }]} />
-          <h1 className="mt-6 text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">
+          <h1 className="mt-6 text-3xl font-semibold tracking-[-0.02em] text-soft sm:text-4xl">
             {title}
           </h1>
           <p className="mt-4 text-sm leading-relaxed text-body">{intro}</p>

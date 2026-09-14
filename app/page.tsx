@@ -129,7 +129,7 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/60 to-transparent lg:w-40" />
         </div>
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl py-10 lg:py-14">
+          <div className="max-w-2xl py-10 lg:max-w-xl lg:py-14 xl:max-w-2xl">
             <p className="text-[0.68rem] font-bold uppercase tracking-[0.14em] text-muted">
               Genuine brands. Global supply.
             </p>
@@ -412,38 +412,37 @@ export default function HomePage() {
       </section>
 
       {/* Wholesale editorial band with container imagery */}
-      <section
-        aria-labelledby="wholesale-band"
-        className="relative overflow-hidden bg-surface-2"
-      >
-        <div className="pointer-events-none absolute inset-y-0 right-0 hidden md:block">
-          <Image
-            src="/images/containers.png"
-            alt=""
-            width={570}
-            height={224}
-            className="h-full w-auto object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-surface-2 via-surface-2/50 to-transparent md:w-44" />
-        </div>
-        <div className="relative mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-          <h2
-            id="wholesale-band"
-            className="max-w-xl text-3xl font-semibold leading-[1.1] tracking-[-0.02em] text-soft"
-          >
-            Wholesale branded products for e-commerce sellers and retailers.
-          </h2>
-          <p className="mt-3 max-w-xl text-[0.82rem] leading-relaxed text-body">
-            Hyprr Retail is a wholesale distributor in the USA, supplying
-            genuine branded tools, hardware and outdoor products to e-commerce
-            sellers, retailers and other wholesale buyers.
-          </p>
-          <Link
-            href="/about"
-            className="mt-5 inline-flex items-center gap-2 rounded-md border-[1.5px] border-ink bg-white px-5 py-3 text-xs font-extrabold text-ink transition-colors hover:bg-surface"
-          >
-            Learn more about Hyprr Retail&nbsp;&nbsp;→
-          </Link>
+      <section aria-labelledby="wholesale-band" className="bg-surface-2">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 md:grid-cols-[minmax(0,1fr)_minmax(0,480px)]">
+          <div className="px-4 py-8 sm:px-6 lg:px-8">
+            <h2
+              id="wholesale-band"
+              className="max-w-xl text-3xl font-semibold leading-[1.1] tracking-[-0.02em] text-soft"
+            >
+              Wholesale branded products for e-commerce sellers and retailers.
+            </h2>
+            <p className="mt-3 max-w-xl text-[0.82rem] leading-relaxed text-body">
+              Hyprr Retail is a wholesale distributor in the USA, supplying
+              genuine branded tools, hardware and outdoor products to
+              e-commerce sellers, retailers and other wholesale buyers.
+            </p>
+            <Link
+              href="/about"
+              className="mt-5 inline-flex items-center gap-2 rounded-md border-[1.5px] border-ink bg-white px-5 py-3 text-xs font-extrabold text-ink transition-colors hover:bg-surface"
+            >
+              Learn more about Hyprr Retail&nbsp;&nbsp;→
+            </Link>
+          </div>
+          <div className="relative hidden md:block">
+            <Image
+              src="/images/containers.png"
+              alt="Forklift moving freight between stacked shipping containers"
+              fill
+              sizes="480px"
+              className="object-cover"
+            />
+            <div className="absolute inset-y-0 left-0 w-28 bg-gradient-to-r from-surface-2 to-transparent" />
+          </div>
         </div>
       </section>
 
