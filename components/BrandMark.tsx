@@ -37,8 +37,8 @@ export default function BrandMark({
   }
   return (
     <span
-      className={`select-none font-extrabold uppercase tracking-[0.08em] text-ink ${
-        size === "sm" ? "text-base" : "text-lg"
+      className={`select-none font-extrabold uppercase leading-tight tracking-[0.08em] text-ink ${
+        size === "sm" ? "text-xs" : "text-sm"
       } ${className}`}
     >
       {brand.name}

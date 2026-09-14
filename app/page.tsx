@@ -175,7 +175,7 @@ export default function HomePage() {
             </div>
           </div>
           {/* Mobile hero image — dedicated portrait crop keeping hiker + products */}
-          <div className="relative -mx-4 aspect-[390/616] max-h-[70vh] w-auto sm:-mx-6 lg:hidden">
+          <div className="relative -mx-4 aspect-[3/4] sm:-mx-6 lg:hidden">
             <Image
               src="/images/hero-home-mobile.jpg"
               alt="Hiker with a Thule backpack beside a Milwaukee tool case, KASK helmet and La Sportiva footwear"
@@ -215,7 +215,7 @@ export default function HomePage() {
             Featured brands
           </h2>
           <div className="mt-4 flex flex-wrap items-center justify-between gap-6">
-            <ul className="flex flex-1 flex-wrap items-center gap-x-8 gap-y-5 lg:justify-between lg:pr-16">
+            <ul className="grid w-full grid-cols-3 items-center gap-x-6 gap-y-6 sm:grid-cols-6 lg:flex lg:flex-1 lg:justify-between lg:pr-16">
               {featuredBrands().map((brand) => (
                 <li key={brand.slug}>
                   <BrandMark brand={brand} />
@@ -388,27 +388,29 @@ export default function HomePage() {
               documentation. Conditions apply — and no supplier can guarantee
               marketplace approval.
             </p>
-            <div className="mt-4 flex flex-wrap items-center gap-7">
+            <div className="mt-4 flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:gap-7">
               <Link
                 href="/how-it-works#documentation"
                 className="inline-flex items-center gap-2 rounded-md bg-dark px-5 py-3 text-xs font-semibold text-white transition-colors hover:bg-black"
               >
                 Learn more&nbsp;&nbsp;→
               </Link>
-              <Image
-                src="/brands/amazon.svg"
-                alt="Amazon"
-                width={91}
-                height={28}
-                className="h-6 w-auto translate-y-1"
-              />
-              <Image
-                src="/brands/walmart-spark.svg"
-                alt="Walmart"
-                width={130}
-                height={28}
-                className="h-6 w-auto"
-              />
+              <span className="flex items-center gap-6">
+                <Image
+                  src="/brands/amazon.svg"
+                  alt="Amazon"
+                  width={91}
+                  height={28}
+                  className="h-6 w-auto translate-y-1"
+                />
+                <Image
+                  src="/brands/walmart-spark.svg"
+                  alt="Walmart"
+                  width={130}
+                  height={28}
+                  className="h-6 w-auto"
+                />
+              </span>
             </div>
           </div>
           <div className="lg:pl-10">
@@ -482,7 +484,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
           <h2
             id="wholesale-editorial"
-            className="text-2xl font-bold tracking-[-0.02em] text-soft"
+            className="text-2xl font-bold tracking-[-0.02em] text-ink"
           >
             A wholesale supplier built for commercial buyers
           </h2>
@@ -550,7 +552,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
           <h2
             id="faq-heading"
-            className="text-2xl font-bold tracking-[-0.02em] text-soft"
+            className="text-2xl font-bold tracking-[-0.02em] text-ink"
           >
             Frequently asked questions
           </h2>

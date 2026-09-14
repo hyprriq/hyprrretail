@@ -126,7 +126,7 @@ export default function CategoryPage(props: CategoryPageProps) {
               View all brands&nbsp;&nbsp;→
             </Link>
           </div>
-          <ul className="mt-4 flex flex-wrap items-center gap-x-10 gap-y-5 lg:justify-between lg:pr-10">
+          <ul className="mt-4 grid grid-cols-3 items-center gap-x-6 gap-y-6 sm:grid-cols-6 lg:flex lg:justify-between lg:pr-10">
             {brands.slice(0, 6).map((brand) => (
               <li key={brand.slug}>
                 <BrandMark brand={brand} />
@@ -225,7 +225,7 @@ export default function CategoryPage(props: CategoryPageProps) {
         <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
           <h2
             id={`seo-${props.slug}`}
-            className="text-2xl font-bold tracking-[-0.02em] text-soft"
+            className="text-2xl font-bold tracking-[-0.02em] text-ink"
           >
             {props.seoTitle}
           </h2>
@@ -243,7 +243,7 @@ export default function CategoryPage(props: CategoryPageProps) {
         <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
           <h2
             id={`faq-${props.slug}`}
-            className="text-2xl font-bold tracking-[-0.02em] text-soft"
+            className="text-2xl font-bold tracking-[-0.02em] text-ink"
           >
             {props.name} — frequently asked questions
           </h2>
