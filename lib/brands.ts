@@ -139,6 +139,7 @@ export const BRANDS: Brand[] = [
     featured: false,
     description:
       "Italian-made helmets for climbing, cycling, skiing and safety applications, known for design and protection standards.",
+    logo: "/brands/kask.png",
   },
   {
     name: "Scarpa",
@@ -147,6 +148,7 @@ export const BRANDS: Brand[] = [
     featured: false,
     description:
       "Italian mountain footwear covering hiking boots, climbing shoes, mountaineering and ski-touring boots.",
+    logo: "/brands/scarpa.png",
   },
   {
     name: "Garsport",
@@ -155,6 +157,7 @@ export const BRANDS: Brand[] = [
     featured: false,
     description:
       "Italian outdoor and trekking footwear offering solid quality for value-driven hiking and workwear ranges.",
+    logo: "/brands/garsport.png",
   },
   {
     name: "Edelrid",
@@ -163,6 +166,7 @@ export const BRANDS: Brand[] = [
     featured: false,
     description:
       "German climbing ropes, harnesses and hardware with a long heritage in mountaineering safety equipment.",
+    logo: "/brands/edelrid.png",
   },
   {
     name: "CAMP",
@@ -171,6 +175,7 @@ export const BRANDS: Brand[] = [
     featured: false,
     description:
       "Italian climbing and mountaineering equipment including carabiners, ice axes, crampons and safety gear.",
+    logo: "/brands/camp.png",
   },
   {
     name: "Kong Italy",
@@ -179,6 +184,8 @@ export const BRANDS: Brand[] = [
     featured: false,
     description:
       "Italian-made carabiners, connectors and rescue hardware for climbing, sailing and professional safety use.",
+    logo: "/brands/kong-italy.png",
+    logoBoxy: true,
   },
   {
     name: "Fitwell",
@@ -187,6 +194,7 @@ export const BRANDS: Brand[] = [
     featured: false,
     description:
       "Handcrafted Italian mountaineering and trekking boots built for demanding alpine conditions.",
+    logo: "/brands/fitwell.png",
   },
   {
     name: "Victronix",
@@ -195,6 +203,7 @@ export const BRANDS: Brand[] = [
     featured: false,
     description:
       "Knives, multi-tools and outdoor cutting tools for everyday carry, camping and outdoor retail assortments.",
+    logo: "/brands/victronix.png",
   },
 ];
 

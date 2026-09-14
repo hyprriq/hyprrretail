@@ -41,27 +41,23 @@ export default function SportsOutdoorPage() {
       productCategories={[
         {
           title: "Climbing Equipment",
-          image:
-            "https://images.unsplash.com/photo-1522163182402-834f871fd851?w=800&q=80&auto=format&fit=crop",
-          alt: "Climbing rope and carabiners prepared for a climb",
+          image: "/images/sp-climbing.jpg",
+          alt: "Climber with helmet and carabiners ascending a rock face",
         },
         {
           title: "Hiking & Trekking",
-          image:
-            "https://images.unsplash.com/photo-1533240332313-0db49b459ad6?w=800&q=80&auto=format&fit=crop",
-          alt: "Hiker on a mountain trail with trekking equipment",
+          image: "/images/sp-hiking.jpg",
+          alt: "Hikers with packs and trekking poles on a mountain trail",
         },
         {
           title: "Packs & Bags",
-          image:
-            "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&q=80&auto=format&fit=crop",
-          alt: "Black technical backpack photographed against a plain background",
+          image: "/images/sp-packs.jpg",
+          alt: "Technical trekking backpack with poles on alpine rocks",
         },
         {
           title: "Footwear & Helmets",
-          image:
-            "https://images.unsplash.com/photo-1520639888713-7851133b1ed0?w=800&q=80&auto=format&fit=crop",
-          alt: "Hiking boots on rocky mountain terrain",
+          image: "/images/sp-footwear.jpg",
+          alt: "Hiking boot close-up on rocky mountain terrain",
         },
       ]}
       splitTitle="Gear your customers already trust."
