@@ -123,7 +123,7 @@ export default function HomePage() {
           className="pointer-events-none absolute inset-y-0 left-[34%] right-0 hidden overflow-hidden lg:block"
         >
           <Image
-            src="/images/hero-ambient2.jpg"
+            src="/images/hero-ambient3.jpg"
             alt=""
             fill
             sizes="66vw"
@@ -134,10 +134,10 @@ export default function HomePage() {
         {/* Sharp subject anchored right at native proportions */}
         <div className="pointer-events-none absolute inset-y-0 right-0 hidden lg:block">
           <Image
-            src="/images/hero-home.jpg"
+            src="/images/hero-main.jpg"
             alt="Hiker with a Thule backpack beside a Milwaukee tool case, KASK helmet, La Sportiva footwear and trekking poles in the mountains"
-            width={635}
-            height={616}
+            width={978}
+            height={1125}
             priority
             className="h-full w-auto object-cover [mask-image:linear-gradient(to_right,transparent,black_12%)]"
           />
@@ -192,7 +192,7 @@ export default function HomePage() {
           {/* Mobile hero image — dedicated portrait crop keeping hiker + products */}
           <div className="relative -mx-4 aspect-[3/4] sm:-mx-6 lg:hidden">
             <Image
-              src="/images/hero-home-mobile.jpg"
+              src="/images/hero-mobile2.jpg"
               alt="Hiker with a Thule backpack beside a Milwaukee tool case, KASK helmet and La Sportiva footwear"
               fill
               priority
