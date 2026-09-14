@@ -1,19 +1,44 @@
+import Image from "next/image";
+import type { Brand } from "@/lib/brands";
+
+const sizes = {
+  sm: { box: "h-7", width: 96, height: 28 },
+  md: { box: "h-9", width: 128, height: 36 },
+} as const;
+
 /**
- * Clean typographic brand treatment. Official logo assets can replace these
- * marks later without changing any page — swap the implementation here.
+ * Official brand logo where an asset exists (natural brand colors, never
+ * recolored), with a clean typographic treatment as the fallback for brands
+ * whose official mark hasn't been sourced yet.
  */
 export default function BrandMark({
-  name,
+  brand,
+  size = "md",
   className = "",
 }: {
-  name: string;
+  brand: Pick<Brand, "name" | "logo">;
+  size?: keyof typeof sizes;
   className?: string;
 }) {
+  const s = sizes[size];
+  if (brand.logo) {
+    return (
+      <Image
+        src={brand.logo}
+        alt={`${brand.name} logo`}
+        width={s.width}
+        height={s.height}
+        className={`${s.box} w-auto object-contain ${className}`}
+      />
+    );
+  }
   return (
     <span
-      className={`select-none text-lg font-extrabold uppercase tracking-[0.08em] text-ink ${className}`}
+      className={`select-none font-extrabold uppercase tracking-[0.08em] text-ink ${
+        size === "sm" ? "text-base" : "text-lg"
+      } ${className}`}
     >
-      {name}
+      {brand.name}
     </span>
   );
 }

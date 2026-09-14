@@ -141,18 +141,35 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-          <div className="relative aspect-[4/3] overflow-hidden rounded-card lg:aspect-[5/4]">
-            <Image
-              src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=1200&q=80&auto=format&fit=crop"
-              alt="Hikers with backpacks and trekking gear crossing a mountain trail"
-              fill
-              priority
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover"
-            />
-            <p className="absolute bottom-4 right-4 rounded-md bg-white/90 px-3 py-2 text-xs font-semibold italic text-ink">
-              Tools for today. Adventures for tomorrow.
-            </p>
+          <div className="relative mb-6">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-card lg:aspect-[5/4]">
+              <Image
+                src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=1200&q=80&auto=format&fit=crop"
+                alt="Hikers with large backpacks and trekking gear crossing a mountain trail"
+                fill
+                priority
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-black/10" />
+              <p className="absolute right-5 top-5 max-w-[11rem] text-right text-sm font-semibold italic leading-snug text-white [text-shadow:0_1px_10px_rgba(0,0,0,0.55)]">
+                Tools for today.
+                <br />
+                Adventures for tomorrow.
+              </p>
+            </div>
+            {/* Overlapping product frame ties professional tools into the outdoor scene. */}
+            <div className="absolute -bottom-6 left-5 w-[40%] max-w-[230px] overflow-hidden rounded-card shadow-xl ring-4 ring-white">
+              <div className="relative aspect-[4/3]">
+                <Image
+                  src="https://images.unsplash.com/photo-1581147036324-c17ac41dfa6c?w=600&q=80&auto=format&fit=crop"
+                  alt="Drawer of professional tools ready for the job"
+                  fill
+                  sizes="230px"
+                  className="object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
         <div className="mx-auto max-w-7xl px-4 pb-8 sm:px-6 lg:px-8">
@@ -188,7 +205,7 @@ export default function HomePage() {
           <p className="mt-2 max-w-2xl text-sm leading-relaxed text-body">
             We supply genuine products from established tool, hardware and
             outdoor brands, including Milwaukee, Makita, Knipex, Thule, LEKI
-            and KASK — with the full brand directory on our{" "}
+            and Stanley — with the full brand directory on our{" "}
             <Link href="/brands" className="font-medium underline underline-offset-4">
               Brands page
             </Link>
@@ -197,7 +214,7 @@ export default function HomePage() {
           <ul className="mt-7 grid grid-cols-2 items-center gap-x-6 gap-y-8 sm:grid-cols-3 lg:grid-cols-6">
             {featuredBrands().map((brand) => (
               <li key={brand.slug} className="flex justify-center">
-                <BrandMark name={brand.name} />
+                <BrandMark brand={brand} />
               </li>
             ))}
           </ul>
@@ -221,8 +238,8 @@ export default function HomePage() {
               title: "Sports & Outdoor",
               copy: "Climbing, hiking, outdoor equipment and footwear for retailers and e-commerce sellers.",
               image:
-                "https://images.unsplash.com/photo-1533240332313-0db49b459ad6?w=1000&q=80&auto=format&fit=crop",
-              alt: "Hiker with a backpack walking along a mountain ridge",
+                "https://images.unsplash.com/photo-1501554728187-ce583db33af7?w=1000&q=80&auto=format&fit=crop",
+              alt: "Hikers with backpacks on a green alpine trail",
             },
           ].map((card) => (
             <Link

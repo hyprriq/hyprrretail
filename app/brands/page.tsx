@@ -71,8 +71,10 @@ export default function BrandsPage() {
                   key={brand.slug}
                   className="flex flex-col rounded-card border border-line bg-white p-6"
                 >
-                  <BrandMark name={brand.name} />
-                  <p className="mt-1 text-[0.7rem] font-semibold uppercase tracking-wider text-faint">
+                  <div className="flex h-10 items-center">
+                    <BrandMark brand={brand} />
+                  </div>
+                  <p className="mt-2 text-[0.7rem] font-semibold uppercase tracking-wider text-faint">
                     {category.name}
                   </p>
                   <p className="mt-3 flex-1 text-sm leading-relaxed text-body">

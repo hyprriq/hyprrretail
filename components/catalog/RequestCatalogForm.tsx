@@ -46,6 +46,7 @@ export default function RequestCatalogForm({
       name: String(data.get("name") ?? "").trim(),
       company: String(data.get("company") ?? "").trim(),
       email: String(data.get("email") ?? "").trim(),
+      phone: String(data.get("phone") ?? "").trim(),
       businessType: String(data.get("businessType") ?? ""),
       marketplace: String(data.get("marketplace") ?? ""),
       country: String(data.get("country") ?? ""),
@@ -151,6 +152,19 @@ export default function RequestCatalogForm({
             required
             autoComplete="email"
             placeholder="you@company.com"
+            className={inputClasses}
+          />
+        </div>
+        <div>
+          <label htmlFor="rc-phone" className={labelClasses}>
+            Phone <span className="font-normal text-muted">(optional)</span>
+          </label>
+          <input
+            id="rc-phone"
+            name="phone"
+            type="tel"
+            autoComplete="tel"
+            placeholder="+1 555 000 0000"
             className={inputClasses}
           />
         </div>

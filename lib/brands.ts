@@ -13,6 +13,8 @@ export interface Brand {
   category: CategorySlug;
   featured: boolean;
   description: string;
+  /** Path to an official logo asset in /public; omit to fall back to a typographic mark. */
+  logo?: string;
 }
 
 export const CATEGORIES: Category[] = [
@@ -41,6 +43,7 @@ export const BRANDS: Brand[] = [
     featured: true,
     description:
       "Professional cordless power tools, drills, impact drivers and jobsite equipment used by trade professionals worldwide.",
+    logo: "/brands/milwaukee.svg",
   },
   {
     name: "Milwaukee Accessories",
@@ -57,14 +60,16 @@ export const BRANDS: Brand[] = [
     featured: true,
     description:
       "Cordless and corded power tools for construction, woodworking and industrial applications, with a broad battery-platform ecosystem.",
+    logo: "/brands/makita.svg",
   },
   {
     name: "Stanley",
     slug: "stanley",
     category: "tools-hardware",
-    featured: false,
+    featured: true,
     description:
       "Hand tools, tape measures, storage and jobsite essentials from one of the most recognized names in tools.",
+    logo: "/brands/stanley.svg",
   },
   {
     name: "Knipex",
@@ -73,6 +78,7 @@ export const BRANDS: Brand[] = [
     featured: true,
     description:
       "Precision pliers, cutters and gripping tools made in Germany, widely used by electricians, mechanics and industrial buyers.",
+    logo: "/brands/knipex.svg",
   },
   {
     name: "Opinel",
@@ -81,6 +87,7 @@ export const BRANDS: Brand[] = [
     featured: false,
     description:
       "Classic French folding knives and cutting tools with strong recognition in outdoor, kitchen and everyday-carry segments.",
+    logo: "/brands/opinel.jpg",
   },
   // Sports & Outdoor
   {
@@ -90,6 +97,7 @@ export const BRANDS: Brand[] = [
     featured: false,
     description:
       "Climbing hardware, harnesses, helmets and headlamps for climbing, mountaineering and vertical work.",
+    logo: "/brands/petzl.png",
   },
   {
     name: "Thule",
@@ -98,6 +106,7 @@ export const BRANDS: Brand[] = [
     featured: true,
     description:
       "Backpacks, luggage, laptop bags, bike carriers and transport solutions for active and travel-focused customers.",
+    logo: "/brands/thule.svg",
   },
   {
     name: "LEKI",
@@ -106,6 +115,7 @@ export const BRANDS: Brand[] = [
     featured: true,
     description:
       "Trekking poles, ski poles and gloves engineered in Germany for hiking, trail running and winter sports.",
+    logo: "/brands/leki.png",
   },
   {
     name: "La Sportiva",
@@ -114,12 +124,13 @@ export const BRANDS: Brand[] = [
     featured: false,
     description:
       "Italian climbing shoes, mountain boots and trail-running footwear with a strong following among outdoor athletes.",
+    logo: "/brands/la-sportiva.svg",
   },
   {
     name: "KASK",
     slug: "kask",
     category: "sports-outdoor",
-    featured: true,
+    featured: false,
     description:
       "Italian-made helmets for climbing, cycling, skiing and safety applications, known for design and protection standards.",
   },

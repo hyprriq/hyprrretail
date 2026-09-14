@@ -7,25 +7,23 @@ const quickLinks = [
   { label: "Home", href: "/" },
   { label: "Brands", href: "/brands" },
   ...CATEGORY_LINKS,
+  { label: "How It Works", href: "/how-it-works" },
 ];
 
 const companyLinks = [
   { label: "About", href: "/about" },
-  { label: "How It Works", href: "/how-it-works" },
   { label: "Contact", href: "/contact" },
-];
-
-const supportLinks = [
-  { label: "Marketplace Documentation Support", href: "/how-it-works#documentation" },
-  { label: "Shipping", href: "/shipping-policy" },
-  { label: "FAQs", href: "/#faqs" },
+  {
+    label: "Marketplace Documentation Support",
+    href: "/how-it-works#documentation",
+  },
 ];
 
 export default function Footer() {
   return (
     <footer className="border-t border-line bg-white">
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 gap-10 md:grid-cols-3 lg:grid-cols-5">
+        <div className="grid grid-cols-2 gap-10 md:grid-cols-3 lg:grid-cols-4">
           <div className="col-span-2 md:col-span-3 lg:col-span-1">
             <Logo />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted">
@@ -57,22 +55,6 @@ export default function Footer() {
             <h2 className="text-sm font-bold text-ink">Company</h2>
             <ul className="mt-4 space-y-2.5">
               {companyLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-muted transition-colors hover:text-ink"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-
-          <nav aria-label="Support">
-            <h2 className="text-sm font-bold text-ink">Support</h2>
-            <ul className="mt-4 space-y-2.5">
-              {supportLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}

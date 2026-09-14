@@ -4,6 +4,7 @@ interface CatalogRequestPayload {
   name?: string;
   company?: string;
   email?: string;
+  phone?: string;
   businessType?: string;
   marketplace?: string;
   country?: string;
@@ -56,6 +57,7 @@ export async function POST(request: Request) {
     `Name: ${name}`,
     `Company: ${clean(payload.company) || "—"}`,
     `Email: ${email}`,
+    `Phone: ${clean(payload.phone) || "—"}`,
     `Business type: ${businessType}`,
     `Marketplace: ${clean(payload.marketplace) || "—"}`,
     `Country: ${clean(payload.country) || "—"}`,

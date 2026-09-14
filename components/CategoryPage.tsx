@@ -107,7 +107,7 @@ export default function CategoryPage(props: CategoryPageProps) {
           <ul className="mt-7 grid grid-cols-2 items-center gap-x-6 gap-y-8 sm:grid-cols-3 lg:grid-cols-6">
             {brands.slice(0, 6).map((brand) => (
               <li key={brand.slug} className="flex justify-center">
-                <BrandMark name={brand.name} className="text-base" />
+                <BrandMark brand={brand} />
               </li>
             ))}
           </ul>

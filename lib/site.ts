@@ -20,6 +20,7 @@ export const CATEGORY_LINKS: NavItem[] = [
 ];
 
 export const MAIN_NAV: NavItem[] = [
+  { label: "Home", href: "/" },
   { label: "Brands", href: "/brands" },
   { label: "Categories", href: "#", children: CATEGORY_LINKS },
   { label: "How It Works", href: "/how-it-works" },
