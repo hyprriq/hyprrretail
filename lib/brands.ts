@@ -15,6 +15,8 @@ export interface Brand {
   description: string;
   /** Path to an official logo asset in /public; omit to fall back to a typographic mark. */
   logo?: string;
+  /** Boxed/emblem logos render slightly smaller for optical balance with wordmarks. */
+  logoBoxy?: boolean;
 }
 
 export const CATEGORIES: Category[] = [
@@ -61,6 +63,7 @@ export const BRANDS: Brand[] = [
     description:
       "Cordless and corded power tools for construction, woodworking and industrial applications, with a broad battery-platform ecosystem.",
     logo: "/brands/makita.svg",
+    logoBoxy: true,
   },
   {
     name: "Stanley",
@@ -70,6 +73,7 @@ export const BRANDS: Brand[] = [
     description:
       "Hand tools, tape measures, storage and jobsite essentials from one of the most recognized names in tools.",
     logo: "/brands/stanley.svg",
+    logoBoxy: true,
   },
   {
     name: "Knipex",
@@ -79,6 +83,7 @@ export const BRANDS: Brand[] = [
     description:
       "Precision pliers, cutters and gripping tools made in Germany, widely used by electricians, mechanics and industrial buyers.",
     logo: "/brands/knipex.svg",
+    logoBoxy: true,
   },
   {
     name: "Opinel",
@@ -88,6 +93,7 @@ export const BRANDS: Brand[] = [
     description:
       "Classic French folding knives and cutting tools with strong recognition in outdoor, kitchen and everyday-carry segments.",
     logo: "/brands/opinel.jpg",
+    logoBoxy: true,
   },
   // Sports & Outdoor
   {

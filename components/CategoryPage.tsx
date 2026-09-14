@@ -126,7 +126,7 @@ export default function CategoryPage(props: CategoryPageProps) {
               View all brands&nbsp;&nbsp;→
             </Link>
           </div>
-          <ul className="mt-4 flex flex-wrap items-center gap-x-12 gap-y-5">
+          <ul className="mt-4 flex flex-wrap items-center gap-x-10 gap-y-5 lg:justify-between lg:pr-10">
             {brands.slice(0, 6).map((brand) => (
               <li key={brand.slug}>
                 <BrandMark brand={brand} />

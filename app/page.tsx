@@ -215,7 +215,7 @@ export default function HomePage() {
             Featured brands
           </h2>
           <div className="mt-4 flex flex-wrap items-center justify-between gap-6">
-            <ul className="flex flex-wrap items-center gap-x-10 gap-y-5">
+            <ul className="flex flex-1 flex-wrap items-center gap-x-8 gap-y-5 lg:justify-between lg:pr-16">
               {featuredBrands().map((brand) => (
                 <li key={brand.slug}>
                   <BrandMark brand={brand} />
@@ -395,8 +395,20 @@ export default function HomePage() {
               >
                 Learn more&nbsp;&nbsp;→
               </Link>
-              <span className="text-lg font-bold text-muted">amazon</span>
-              <span className="text-lg font-bold text-muted">Walmart</span>
+              <Image
+                src="/brands/amazon.svg"
+                alt="Amazon"
+                width={91}
+                height={28}
+                className="h-6 w-auto translate-y-1"
+              />
+              <Image
+                src="/brands/walmart.svg"
+                alt="Walmart"
+                width={130}
+                height={28}
+                className="h-6 w-auto"
+              />
             </div>
           </div>
           <div className="lg:pl-10">

@@ -16,19 +16,22 @@ export default function BrandMark({
   size = "md",
   className = "",
 }: {
-  brand: Pick<Brand, "name" | "logo">;
+  brand: Pick<Brand, "name" | "logo" | "logoBoxy">;
   size?: keyof typeof sizes;
   className?: string;
 }) {
   const s = sizes[size];
   if (brand.logo) {
+    // Boxed/emblem logos carry more visual weight than wordmarks at equal
+    // height, so they render one step smaller for optical balance.
+    const box = brand.logoBoxy ? (size === "md" ? "h-8" : "h-6") : s.box;
     return (
       <Image
         src={brand.logo}
         alt={`${brand.name} logo`}
         width={s.width}
         height={s.height}
-        className={`${s.box} w-auto object-contain ${className}`}
+        className={`${box} w-auto object-contain ${className}`}
       />
     );
   }
