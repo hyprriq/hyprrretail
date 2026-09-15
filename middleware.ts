@@ -10,7 +10,15 @@ import { NextResponse, type NextRequest } from "next/server";
  * why the spam URLs have persisted. 410 is the only status that says the
  * resource is permanently gone and should be dropped from the index.
  */
-const GONE_PREFIXES = ["/product/", "/shop/", "/product-category/"];
+const GONE_PREFIXES = [
+  "/product/",
+  "/shop/",
+  "/product-category/",
+  // WordPress core leftovers. Google still lists wp-sitemap-posts-page-1.xml as
+  // a discovery source for the homepage, so these are demonstrably still known.
+  // Nothing in this app begins with /wp-, so the whole prefix is safe to retire.
+  "/wp-",
+];
 
 function isGone(pathname: string): boolean {
   // Any leftover PHP endpoint — the whole class is spam or dead WordPress.
