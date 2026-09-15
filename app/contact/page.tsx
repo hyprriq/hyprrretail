@@ -62,7 +62,7 @@ export default function ContactPage() {
                     <item.icon className="h-5 w-5" />
                   </span>
                   <div>
-                    <h3 className="text-[0.95rem] font-bold text-ink">
+                    <h3 className="text-base font-bold text-ink">
                       {item.title}
                     </h3>
                     <p className="mt-1 text-sm leading-relaxed text-body">

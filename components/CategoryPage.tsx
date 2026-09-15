@@ -67,7 +67,7 @@ export default function CategoryPage(props: CategoryPageProps) {
             <p className="text-[0.68rem] font-extrabold uppercase tracking-[0.14em] text-body">
               {props.eyebrow}
             </p>
-            <h1 className="mt-1.5 text-4xl font-bold leading-[1.05] tracking-[-0.02em] text-soft">
+            <h1 className="mt-1.5 text-4xl font-bold leading-[1.05] tracking-[-0.02em] text-soft sm:text-5xl">
               {props.heroTitle}
             </h1>
             <p className="mt-1.5 text-lg font-extrabold text-ink">
@@ -164,7 +164,7 @@ export default function CategoryPage(props: CategoryPageProps) {
                   />
                 </div>
                 <div className="flex items-center justify-between gap-3 px-4 py-3.5">
-                  <h3 className="text-[0.82rem] font-bold text-ink">
+                  <h3 className="text-sm font-bold text-ink">
                     {card.title}
                   </h3>
                   <ArrowRightIcon className="h-4 w-4 text-ink" />

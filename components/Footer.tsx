@@ -1,7 +1,13 @@
 import Link from "next/link";
 import Logo from "./Logo";
 import RequestCatalogButton from "./catalog/RequestCatalogButton";
-import { CATEGORY_LINKS, LEGAL_LINKS } from "@/lib/site";
+import {
+  AREA_SERVED,
+  CATEGORY_LINKS,
+  LEGAL_LINKS,
+  SITE_ADDRESS,
+  SITE_LEGAL_NAME,
+} from "@/lib/site";
 
 const quickLinks = [
   { label: "Home", href: "/" },
@@ -38,7 +44,7 @@ export default function Footer() {
           </div>
 
           <nav aria-label="Quick links">
-            <h2 className="text-sm font-semibold text-ink">Quick Links</h2>
+            <p className="text-sm font-semibold text-ink">Quick Links</p>
             <ul className="mt-4 space-y-2.5">
               {quickLinks.map((link) => (
                 <li key={link.href}>
@@ -54,7 +60,7 @@ export default function Footer() {
           </nav>
 
           <nav aria-label="Company">
-            <h2 className="text-sm font-semibold text-ink">Company</h2>
+            <p className="text-sm font-semibold text-ink">Company</p>
             <ul className="mt-4 space-y-2.5">
               {companyLinks.map((link) => (
                 <li key={link.href}>
@@ -70,7 +76,7 @@ export default function Footer() {
           </nav>
 
           <nav aria-label="Policies">
-            <h2 className="text-sm font-semibold text-ink">Policies</h2>
+            <p className="text-sm font-semibold text-ink">Policies</p>
             <ul className="mt-4 space-y-2.5">
               {LEGAL_LINKS.map((link) => (
                 <li key={link.href}>
@@ -86,13 +92,44 @@ export default function Footer() {
           </nav>
         </div>
 
-        <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-line pt-6 sm:flex-row sm:items-center">
-          <p className="text-xs text-muted">
-            © {new Date().getFullYear()} Hyprr Retail. All rights reserved.
+        <div className="mt-12 border-t border-line pt-6">
+          <p className="text-xs font-semibold text-body">{SITE_LEGAL_NAME}</p>
+          <p className="mt-1 text-xs text-muted">
+            {SITE_ADDRESS.street}, {SITE_ADDRESS.city}, {SITE_ADDRESS.region}{" "}
+            {SITE_ADDRESS.postalCode}, United States
           </p>
-          <p className="text-xs text-muted">
-            Supplying brands. Building businesses.
+          <p className="mt-1 text-xs text-muted">
+            Serving {AREA_SERVED.slice(0, -1).join(", ")} and{" "}
+            {AREA_SERVED[AREA_SERVED.length - 1]}
           </p>
+
+          <div className="mt-5 max-w-4xl space-y-2.5">
+            <p className="text-[0.7rem] leading-relaxed text-muted">
+              {SITE_LEGAL_NAME} is an independent wholesale distributor. We are
+              not affiliated with, authorized by, endorsed by or sponsored by
+              Amazon.com, Inc., Walmart Inc., or any of the brands listed on
+              this site. All product names, brand names, logos and trademarks
+              are the property of their respective owners and are used here for
+              identification purposes only.
+            </p>
+            <p className="text-[0.7rem] leading-relaxed text-muted">
+              Hyprr Retail supplies products with commercial documentation.
+              Buyers are responsible for their own eligibility to sell any
+              product on any marketplace, and for meeting that
+              marketplace&apos;s requirements. We do not guarantee marketplace
+              approval.
+            </p>
+          </div>
+
+          <div className="mt-5 flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
+            <p className="text-xs text-muted">
+              © {new Date().getFullYear()} {SITE_LEGAL_NAME}. All rights
+              reserved.
+            </p>
+            <p className="text-xs text-muted">
+              Supplying brands. Building businesses.
+            </p>
+          </div>
         </div>
       </div>
     </footer>

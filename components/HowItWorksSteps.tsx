@@ -121,7 +121,7 @@ export default function HowItWorksSteps({
             <p className="mt-3 text-base font-extrabold text-ink">
               {step.number}
             </p>
-            <h3 className="mt-0.5 max-w-[10rem] text-[0.85rem] font-bold leading-snug text-ink">
+            <h3 className="mt-0.5 max-w-[10rem] text-sm font-bold leading-snug text-ink">
               {step.title}
             </h3>
             <p

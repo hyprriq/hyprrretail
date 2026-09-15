@@ -449,7 +449,7 @@ export default function HomePage() {
                     className="mx-auto h-9 w-9"
                     style={{ color: "#6b5cff" }}
                   />
-                  <h3 className="mt-2.5 text-[0.8rem] font-bold text-ink">
+                  <h3 className="mt-2.5 text-sm font-bold text-ink">
                     {method.title}
                   </h3>
                   <p className="mt-0.5 text-xs text-body">{method.copy}</p>
