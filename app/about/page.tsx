@@ -13,7 +13,7 @@ import {
 export const metadata: Metadata = {
   title: "A Wholesale Distributor You Can Verify",
   description:
-    "Supplying branded tools and outdoor gear to Amazon, Walmart and retail sellers. How we operate, what we document, and how to verify us.",
+    "Five years supplying branded tools and outdoor gear to Amazon, Walmart and retail sellers. How we operate, what we document, and how to verify us.",
   alternates: { canonical: "/about" },
   openGraph: {
     title: "About Hyprr Retail",

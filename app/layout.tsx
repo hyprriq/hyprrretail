@@ -6,7 +6,15 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CatalogModalProvider from "@/components/catalog/CatalogModalContext";
 import JsonLd from "@/components/JsonLd";
-import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
+import {
+  AREA_SERVED,
+  SITE_ADDRESS,
+  SITE_DESCRIPTION,
+  SITE_LEGAL_NAME,
+  SITE_NAME,
+  SITE_URL,
+} from "@/lib/site";
+import { BRANDS } from "@/lib/brands";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -41,18 +49,38 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           data={{
             "@context": "https://schema.org",
             "@type": "Organization",
+            "@id": `${SITE_URL}/#organization`,
             name: SITE_NAME,
+            legalName: SITE_LEGAL_NAME,
             url: SITE_URL,
             description: SITE_DESCRIPTION,
             slogan: "Supplying brands. Building businesses.",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: SITE_ADDRESS.street,
+              addressLocality: SITE_ADDRESS.city,
+              addressRegion: SITE_ADDRESS.region,
+              postalCode: SITE_ADDRESS.postalCode,
+              addressCountry: SITE_ADDRESS.country,
+            },
+            areaServed: [...AREA_SERVED],
+            contactPoint: {
+              "@type": "ContactPoint",
+              contactType: "sales",
+              url: `${SITE_URL}/contact`,
+              availableLanguage: "en",
+            },
+            brand: BRANDS.map((b) => ({ "@type": "Brand", name: b.name })),
           }}
         />
         <JsonLd
           data={{
             "@context": "https://schema.org",
             "@type": "WebSite",
+            "@id": `${SITE_URL}/#website`,
             name: SITE_NAME,
             url: SITE_URL,
+            publisher: { "@id": `${SITE_URL}/#organization` },
           }}
         />
         <CatalogModalProvider>
