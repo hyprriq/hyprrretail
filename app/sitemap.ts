@@ -2,6 +2,10 @@ import type { MetadataRoute } from "next";
 import { getInsightSlugs } from "@/lib/insights";
 import { SITE_URL } from "@/lib/site";
 
+// Regenerate hourly so newly published Insights articles appear without a
+// redeploy, instead of freezing whatever existed at build time.
+export const revalidate = 3600;
+
 // Update when core page content meaningfully changes — a stable date is more
 // truthful to crawlers than stamping every build as "just modified".
 const LAST_CONTENT_UPDATE = new Date("2026-09-14");

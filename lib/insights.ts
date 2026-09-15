@@ -85,7 +85,8 @@ export async function getInsights(): Promise<InsightCard[]> {
       `*[_type == "post" && defined(slug.current)] | order(publishedAt desc) ${CARD_PROJECTION}`
     );
     return items.map(normalizeHero);
-  } catch {
+  } catch (err) {
+    console.error("getInsights failed — rendering empty list:", err);
     return [];
   }
 }
@@ -104,7 +105,8 @@ export async function getInsight(slug: string): Promise<Insight | null> {
       { slug }
     );
     return item ? normalizeHero(item) : null;
-  } catch {
+  } catch (err) {
+    console.error(`getInsight("${slug}") failed:`, err);
     return null;
   }
 }
@@ -118,7 +120,10 @@ export async function getInsightSlugs(): Promise<
     >(
       `*[_type == "post" && defined(slug.current)]{"slug": slug.current, publishedAt, updatedAt}`
     );
-  } catch {
+  } catch (err) {
+    // An empty return here silently drops every article from the sitemap,
+    // so make the failure visible in Vercel logs.
+    console.error("getInsightSlugs failed — sitemap will omit articles:", err);
     return [];
   }
 }
