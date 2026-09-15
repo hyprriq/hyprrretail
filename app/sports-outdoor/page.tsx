@@ -85,7 +85,7 @@ export default function SportsOutdoorPage() {
           <p>
             Our current Sports & Outdoor brands include Petzl, Thule, LEKI, La
             Sportiva, KASK, Scarpa, Garsport, Edelrid, CAMP, Kong Italy,
-            Fitwell and Victronix. These are names outdoor customers actively
+            Fitwell and Victorinox. These are names outdoor customers actively
             search for, which makes them strong wholesale inventory for
             e-commerce sellers, specialist retailers and outdoor stores
             building a branded assortment.
@@ -114,7 +114,7 @@ export default function SportsOutdoorPage() {
           question:
             "Which outdoor brands can I buy wholesale from Hyprr Retail?",
           answer:
-            "Our current Sports & Outdoor range includes Petzl, Thule, LEKI, La Sportiva, KASK, Scarpa, Garsport, Edelrid, CAMP, Kong Italy, Fitwell and Victronix, with more brands added over time. If you need a brand not listed, ask in your catalog request.",
+            "Our current Sports & Outdoor range includes Petzl, Thule, LEKI, La Sportiva, KASK, Scarpa, Garsport, Edelrid, CAMP, Kong Italy, Fitwell and Victorinox, with more brands added over time. If you need a brand not listed, ask in your catalog request.",
         },
         {
           question: "Do you supply climbing and safety equipment wholesale?",

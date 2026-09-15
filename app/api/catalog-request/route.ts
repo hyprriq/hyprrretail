@@ -124,6 +124,41 @@ export async function POST(request: Request) {
       );
     }
 
+    // Best-effort acknowledgement to the enquirer. No pricing, no catalog
+    // attachment — the catalog is always sent manually after qualification.
+    // A failure here must not fail the request that was already delivered.
+    try {
+      const ack = await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${apiKey}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          from: fromEmail,
+          to: [email],
+          subject: "We've received your catalog request — Hyprr Retail",
+          text: [
+            `Hi ${name},`,
+            "",
+            "Thanks for your interest. We've received your catalog request — our team reviews each one and will come back to you within one business day.",
+            "",
+            "Hyprr Retail",
+            "https://hyprrretail.com",
+          ].join("\n"),
+        }),
+      });
+      if (!ack.ok) {
+        console.error(
+          "[catalog-request] Acknowledgement send failed:",
+          ack.status,
+          await ack.text()
+        );
+      }
+    } catch (ackError) {
+      console.error("[catalog-request] Acknowledgement send error:", ackError);
+    }
+
     return NextResponse.json({ ok: true });
   } catch (error) {
     console.error("[catalog-request] Delivery error:", error);

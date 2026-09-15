@@ -197,13 +197,13 @@ export const BRANDS: Brand[] = [
     logo: "/brands/fitwell.png",
   },
   {
-    name: "Victronix",
-    slug: "victronix",
+    name: "Victorinox",
+    slug: "victorinox",
     category: "sports-outdoor",
     featured: false,
     description:
       "Knives, multi-tools and outdoor cutting tools for everyday carry, camping and outdoor retail assortments.",
-    logo: "/brands/victronix.png",
+    logo: "/brands/victorinox.png",
   },
 ];
 

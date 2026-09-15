@@ -69,7 +69,10 @@ export default async function InsightPage({
           description: post.excerpt,
           datePublished: post.publishedAt,
           dateModified: post.updatedAt ?? post.publishedAt,
-          author: { "@type": "Organization", name: post.author || SITE_NAME },
+          author:
+            post.author && !post.author.includes("Team")
+              ? { "@type": "Person", name: post.author }
+              : { "@type": "Organization", name: post.author || SITE_NAME },
           publisher: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
           mainEntityOfPage: `${SITE_URL}/insights/${post.slug}`,
           ...(post.heroImage?.url

@@ -14,6 +14,7 @@ const quickLinks = [
 const companyLinks = [
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
+  { label: "Request a Catalog", href: "/request-catalog" },
   {
     label: "Marketplace Documentation Support",
     href: "/how-it-works#documentation",
