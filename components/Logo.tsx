@@ -19,7 +19,10 @@ export default function Logo({
     >
       <span className="text-[1.7rem] tracking-[-0.02em]">
         <span className="font-extrabold text-ink">
-          hypr<span className="text-brand-red">r</span>
+          hypr
+          <span className="bg-gradient-to-b from-[#E8A21C] to-[#DC6412] bg-clip-text text-transparent">
+            r
+          </span>
         </span>
         <span className="font-normal text-[#7a7e8a]">retail</span>
       </span>

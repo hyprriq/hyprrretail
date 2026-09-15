@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGE } from "@/lib/site";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import DocumentGallery from "@/components/DocumentGallery";
@@ -21,6 +22,7 @@ export const metadata: Metadata = {
     "How wholesale ordering works: request a catalog, confirm pricing, issue a purchase order, and receive goods with commercial invoices and packing lists.",
   alternates: { canonical: "/how-it-works" },
   openGraph: {
+    images: [OG_IMAGE],
     title: "How It Works | Hyprr Retail",
     description:
       "A simple, transparent wholesale ordering process — from catalog request to delivery.",

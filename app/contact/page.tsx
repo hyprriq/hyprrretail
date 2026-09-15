@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGE } from "@/lib/site";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ContactForm from "@/components/ContactForm";
 import RequestCatalogButton from "@/components/catalog/RequestCatalogButton";
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
     "Request the current catalog and wholesale pricing for branded tools, hardware and outdoor gear. Tell us your brands, volumes and destination market.",
   alternates: { canonical: "/contact" },
   openGraph: {
+    images: [OG_IMAGE],
     title: "Contact Hyprr Retail",
     description:
       "Wholesale enquiries, brand and product availability, shipping questions and seller support.",

@@ -10,6 +10,14 @@ export const SITE_DESCRIPTION =
 
 export const SITE_LEGAL_NAME = "Hyprr Retail LLC";
 
+/** Default social link-preview image, shared by every page's Open Graph tags. */
+export const OG_IMAGE = {
+  url: "/og.jpg",
+  width: 1200,
+  height: 630,
+  alt: "Hyprr Retail — Global brands. Real opportunities.",
+} as const;
+
 export const SITE_ADDRESS = {
   street: "40 Hilton St",
   city: "Easton",

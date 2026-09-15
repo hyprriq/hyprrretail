@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGE } from "@/lib/site";
 import Image from "next/image";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -17,6 +18,7 @@ export const metadata: Metadata = {
     "Practical guides on wholesale buying for e-commerce sellers and retailers: sourcing through established distribution channels, MOQ, commercial documentation and marketplace selling.",
   alternates: { canonical: "/insights" },
   openGraph: {
+    images: [OG_IMAGE],
     title: "Hyprr Retail Insights",
     description:
       "Practical wholesale buying guides for e-commerce sellers and retailers.",

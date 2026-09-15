@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGE } from "@/lib/site";
 import Link from "next/link";
 import CategoryPage from "@/components/CategoryPage";
 import {
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
     "Wholesale Petzl, Thule, LEKI, KASK, La Sportiva and Scarpa for outdoor retailers and marketplace sellers. Certification paperwork supported.",
   alternates: { canonical: "/sports-outdoor" },
   openGraph: {
+    images: [OG_IMAGE],
     title: "Wholesale Sports & Outdoor Products Supplier | Hyprr Retail",
     description:
       "Branded climbing, hiking and outdoor equipment in wholesale quantities for e-commerce sellers and retailers.",

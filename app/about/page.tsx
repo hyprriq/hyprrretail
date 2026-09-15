@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGE } from "@/lib/site";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CtaBand from "@/components/CtaBand";
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
     "Five years supplying branded tools and outdoor gear to Amazon, Walmart and retail sellers. How we operate, what we document, and how to verify us.",
   alternates: { canonical: "/about" },
   openGraph: {
+    images: [OG_IMAGE],
     title: "About Hyprr Retail",
     description:
       "A B2B wholesale distributor of branded products for e-commerce sellers and retailers.",

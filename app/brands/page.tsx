@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGE } from "@/lib/site";
 import Link from "next/link";
 import BrandMark from "@/components/BrandMark";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
     "Branded wholesale range for resellers: Milwaukee, Makita, Stanley, Knipex, Petzl, Thule, LEKI, KASK and more. Request a catalog by brand.",
   alternates: { canonical: "/brands" },
   openGraph: {
+    images: [OG_IMAGE],
     title: "Wholesale Brands Directory | Hyprr Retail",
     description:
       "Branded tools, hardware and outdoor products available in wholesale quantities through established channels.",

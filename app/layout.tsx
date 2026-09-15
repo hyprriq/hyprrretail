@@ -8,6 +8,7 @@ import CatalogModalProvider from "@/components/catalog/CatalogModalContext";
 import JsonLd from "@/components/JsonLd";
 import {
   AREA_SERVED,
+  OG_IMAGE,
   SITE_ADDRESS,
   SITE_DESCRIPTION,
   SITE_LEGAL_NAME,
@@ -33,9 +34,11 @@ export const metadata: Metadata = {
     type: "website",
     siteName: SITE_NAME,
     url: SITE_URL,
+    images: [OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
+    images: [OG_IMAGE.url],
   },
 };
 
@@ -53,6 +56,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             name: SITE_NAME,
             legalName: SITE_LEGAL_NAME,
             url: SITE_URL,
+            logo: `${SITE_URL}/logo.png`,
             description: SITE_DESCRIPTION,
             slogan: "Supplying brands. Building businesses.",
             address: {

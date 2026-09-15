@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGE } from "@/lib/site";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import RequestCatalogForm from "@/components/catalog/RequestCatalogForm";
 
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
     description:
       "Request the current wholesale catalog for branded tools, hardware, sports and outdoor products.",
     url: "/request-catalog",
+    images: [OG_IMAGE],
   },
 };
 

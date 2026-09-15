@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_IMAGE } from "@/lib/site";
 import Link from "next/link";
 import CategoryPage from "@/components/CategoryPage";
 import {
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
     "Wholesale Milwaukee, Makita, Stanley and Knipex tools and hardware for Amazon sellers, online retailers and stores. Commercial invoices included.",
   alternates: { canonical: "/tools-hardware" },
   openGraph: {
+    images: [OG_IMAGE],
     title: "Wholesale Tools & Hardware Supplier | Hyprr Retail",
     description:
       "Branded power tools, hand tools and hardware in wholesale quantities for e-commerce sellers and retailers.",

@@ -21,13 +21,14 @@ import {
   TagIcon,
 } from "@/components/icons";
 import { featuredBrands } from "@/lib/brands";
-import { SITE_DESCRIPTION } from "@/lib/site";
+import { SITE_DESCRIPTION, OG_IMAGE } from "@/lib/site";
 
 export const metadata: Metadata = {
   description:
     "Branded tools, hardware and outdoor gear in wholesale quantities for Amazon, Walmart and retail sellers. Full commercial invoices and documentation.",
   alternates: { canonical: "/" },
   openGraph: {
+    images: [OG_IMAGE],
     title: "Branded Wholesale Supplier & Distributor | Hyprr Retail",
     description: SITE_DESCRIPTION,
   },

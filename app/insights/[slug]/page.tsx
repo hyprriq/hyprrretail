@@ -41,7 +41,7 @@ export async function generateMetadata({
       description: post.excerpt,
       publishedTime: post.publishedAt,
       modifiedTime: post.updatedAt ?? post.publishedAt,
-      ...(post.heroImage?.url ? { images: [post.heroImage.url] } : {}),
+      images: [post.heroImage?.url ?? "/og.jpg"],
     },
   };
 }
