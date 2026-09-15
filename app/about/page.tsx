@@ -11,9 +11,9 @@ import {
 } from "@/components/icons";
 
 export const metadata: Metadata = {
-  title: "About Hyprr Retail — B2B Wholesale Distributor",
+  title: "A Wholesale Distributor You Can Verify",
   description:
-    "Hyprr Retail is a B2B wholesale distributor supplying branded tools, hardware, sports and outdoor products through established commercial distribution channels to e-commerce sellers, retailers and wholesale buyers.",
+    "Supplying branded tools and outdoor gear to Amazon, Walmart and retail sellers. How we operate, what we document, and how to verify us.",
   alternates: { canonical: "/about" },
   openGraph: {
     title: "About Hyprr Retail",
@@ -29,7 +29,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-4 pb-12 pt-6 sm:px-6 lg:px-8">
           <Breadcrumbs items={[{ label: "About" }]} />
           <h1 className="mt-6 text-4xl font-bold tracking-[-0.02em] text-soft sm:text-5xl">
-            About Hyprr Retail
+            A wholesale distributor you can verify
           </h1>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-body sm:text-lg">
             A B2B wholesale operation focused on one thing: supplying

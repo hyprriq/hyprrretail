@@ -9,9 +9,9 @@ import {
 } from "@/components/icons";
 
 export const metadata: Metadata = {
-  title: "Wholesale Tools & Hardware Supplier",
+  title: "Tools & Hardware Distributor | Wholesale",
   description:
-    "Branded power tools, hand tools and hardware in wholesale quantities through established distribution channels. Milwaukee, Makita, Stanley, Knipex and more for e-commerce sellers, retailers and wholesale buyers.",
+    "Wholesale Milwaukee, Makita, Stanley and Knipex tools and hardware for Amazon sellers, online retailers and stores. Commercial invoices included.",
   alternates: { canonical: "/tools-hardware" },
   openGraph: {
     title: "Wholesale Tools & Hardware Supplier | Hyprr Retail",
@@ -26,7 +26,7 @@ export default function ToolsHardwarePage() {
       slug="tools-hardware"
       name="Tools & Hardware"
       eyebrow="Professional tools. Real business."
-      heroTitle="Tools & Hardware"
+      heroTitle="Wholesale tools and hardware distribution"
       heroTagline="Trusted brands for demanding businesses."
       heroCopy="We supply branded power tools, hand tools, accessories and hardware to e-commerce sellers, retailers and wholesale buyers."
       heroImage="/images/hero-tools.jpg"

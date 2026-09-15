@@ -15,9 +15,9 @@ import {
 } from "@/components/icons";
 
 export const metadata: Metadata = {
-  title: "How It Works — Wholesale Ordering Process",
+  title: "Wholesale Ordering Process & Documentation",
   description:
-    "How wholesale ordering works at Hyprr Retail: request a catalog, select models, confirm pricing and MOQ, issue a purchase order, and receive your order with commercial documentation.",
+    "How wholesale ordering works: request a catalog, confirm pricing, issue a purchase order, and receive goods with commercial invoices and packing lists.",
   alternates: { canonical: "/how-it-works" },
   openGraph: {
     title: "How It Works | Hyprr Retail",
@@ -41,7 +41,7 @@ export default function HowItWorksPage() {
         <div className="mx-auto max-w-7xl px-4 pb-12 pt-6 sm:px-6 lg:px-8">
           <Breadcrumbs items={[{ label: "How It Works" }]} />
           <h1 className="mt-6 text-4xl font-bold tracking-[-0.02em] text-soft sm:text-5xl">
-            How It Works
+            How wholesale ordering and documentation works
           </h1>
           <p className="mt-2 text-xl font-bold text-soft">
             A simple process. Real business opportunities.

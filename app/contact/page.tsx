@@ -5,9 +5,9 @@ import RequestCatalogButton from "@/components/catalog/RequestCatalogButton";
 import { ChatIcon, ClipboardIcon, MailIcon } from "@/components/icons";
 
 export const metadata: Metadata = {
-  title: "Contact Us — Wholesale & Business Enquiries",
+  title: "Request a Wholesale Catalog & Pricing",
   description:
-    "Contact Hyprr Retail with wholesale enquiries, brand and model availability questions, shipping questions or seller support — or request our wholesale catalog.",
+    "Request the current catalog and wholesale pricing for branded tools, hardware and outdoor gear. Tell us your brands, volumes and destination market.",
   alternates: { canonical: "/contact" },
   openGraph: {
     title: "Contact Hyprr Retail",
@@ -23,7 +23,7 @@ export default function ContactPage() {
         <div className="mx-auto max-w-7xl px-4 pb-12 pt-6 sm:px-6 lg:px-8">
           <Breadcrumbs items={[{ label: "Contact" }]} />
           <h1 className="mt-6 text-4xl font-bold tracking-[-0.02em] text-soft sm:text-5xl">
-            Contact Us
+            Request a wholesale catalog and pricing
           </h1>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-body sm:text-lg">
             Ask about brands, models, shipping or anything else — we reply by

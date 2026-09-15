@@ -9,9 +9,9 @@ import {
 } from "@/components/icons";
 
 export const metadata: Metadata = {
-  title: "Wholesale Sports & Outdoor Products Supplier",
+  title: "Wholesale Outdoor & Climbing Gear Supplier",
   description:
-    "Branded climbing, hiking and outdoor equipment in wholesale quantities through established distribution channels. Petzl, Thule, LEKI, KASK, La Sportiva and more for e-commerce sellers and retailers.",
+    "Wholesale Petzl, Thule, LEKI, KASK, La Sportiva and Scarpa for outdoor retailers and marketplace sellers. Certification paperwork supported.",
   alternates: { canonical: "/sports-outdoor" },
   openGraph: {
     title: "Wholesale Sports & Outdoor Products Supplier | Hyprr Retail",
@@ -26,7 +26,7 @@ export default function SportsOutdoorPage() {
       slug="sports-outdoor"
       name="Sports & Outdoor"
       eyebrow="Outdoor brands. Commercial supply."
-      heroTitle="Sports & Outdoor"
+      heroTitle="Wholesale sports and outdoor equipment distribution"
       heroTagline="Equipment people trust outdoors."
       heroCopy="We supply branded climbing, hiking and outdoor products — from trekking poles to helmets to backpacks — to e-commerce sellers, retailers and wholesale buyers."
       heroImage="/images/hero-sports-collage.jpg"

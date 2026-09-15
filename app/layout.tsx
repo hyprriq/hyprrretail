@@ -17,7 +17,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Branded Wholesale Supplier & Distributor | Hyprr Retail",
+    default: "Amazon Wholesale Distributors | Hyprr Retail",
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_DESCRIPTION,

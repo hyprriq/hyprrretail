@@ -24,7 +24,8 @@ import { featuredBrands } from "@/lib/brands";
 import { SITE_DESCRIPTION } from "@/lib/site";
 
 export const metadata: Metadata = {
-  description: SITE_DESCRIPTION,
+  description:
+    "Branded tools, hardware and outdoor gear in wholesale quantities for Amazon, Walmart and retail sellers. Full commercial invoices and documentation.",
   alternates: { canonical: "/" },
   openGraph: {
     title: "Branded Wholesale Supplier & Distributor | Hyprr Retail",
@@ -167,11 +168,11 @@ export default function HomePage() {
               Established brands. Global supply.
             </p>
             <h1 className="mt-3 max-w-[560px] text-[38px] font-extrabold leading-[0.98] tracking-[-0.04em] sm:text-[44px] lg:text-[56px]">
-              <span className="text-soft">Wholesale products</span>
+              <span className="text-soft">Wholesale distributors</span>
               <br />
-              for e-commerce
+              for Amazon, Walmart
               <br />
-              sellers and retailers.
+              and retail sellers.
             </h1>
             <p className="mt-5 max-w-[520px] text-[0.95rem] font-normal leading-relaxed text-body">
               Branded tools, hardware and outdoor products supplied through

@@ -8,9 +8,9 @@ import { ArrowRightIcon } from "@/components/icons";
 import { CATEGORIES, brandsByCategory } from "@/lib/brands";
 
 export const metadata: Metadata = {
-  title: "Wholesale Brands Directory",
+  title: "Milwaukee, Makita & Knipex Wholesale",
   description:
-    "Browse the branded wholesale range available through Hyprr Retail: Milwaukee, Makita, Stanley, Knipex, Petzl, Thule, LEKI, KASK and more — branded wholesale for e-commerce sellers and retailers.",
+    "Branded wholesale range for resellers: Milwaukee, Makita, Stanley, Knipex, Petzl, Thule, LEKI, KASK and more. Request a catalog by brand.",
   alternates: { canonical: "/brands" },
   openGraph: {
     title: "Wholesale Brands Directory | Hyprr Retail",
@@ -26,7 +26,7 @@ export default function BrandsPage() {
         <div className="mx-auto max-w-7xl px-4 pb-12 pt-6 sm:px-6 lg:px-8">
           <Breadcrumbs items={[{ label: "Brands" }]} />
           <h1 className="mt-6 text-4xl font-bold tracking-[-0.02em] text-soft sm:text-5xl">
-            Brands
+            Brands we supply to resellers and retailers
           </h1>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-body sm:text-lg">
             The branded products currently available through Hyprr
