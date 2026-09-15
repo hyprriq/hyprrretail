@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import DocumentGallery from "@/components/DocumentGallery";
 import HowItWorksSteps from "@/components/HowItWorksSteps";
 import RequestCatalogButton from "@/components/catalog/RequestCatalogButton";
 import Image from "next/image";
@@ -166,54 +167,42 @@ export default function HowItWorksPage() {
               the commercial substance — routes, quantities, weights and terms
               — is unedited.
             </p>
-            <div className="mt-5 grid grid-cols-2 gap-4">
-              {[
+            <DocumentGallery
+              docs={[
                 {
                   src: "/images/doc-bill-of-lading.jpg",
                   alt: "Redacted express bill of lading for a sea-freight wholesale shipment from Italy to New York",
                   label: "Express Bill of Lading",
                   sub: "Sea freight, Genova → New York",
-                  aspect: "aspect-[1309/1850]",
+                  width: 1309,
+                  height: 1850,
                 },
                 {
                   src: "/images/doc-ship-notice.jpg",
                   alt: "Redacted ship departure notice for an export consignment from Genova to Newark",
                   label: "Ship Departure Notice",
                   sub: "Export forwarding, Genova → Newark",
-                  aspect: "aspect-[1309/1850]",
+                  width: 1309,
+                  height: 1850,
                 },
                 {
                   src: "/images/doc-invoice-items.jpg",
                   alt: "Redacted commercial invoice line items for a Knipex and Milwaukee wholesale order with air shipping to the USA",
                   label: "Commercial Invoice — Line Items",
                   sub: "Knipex & Milwaukee wholesale order",
-                  aspect: "aspect-[977/807]",
+                  width: 977,
+                  height: 807,
                 },
                 {
                   src: "/images/doc-brand-approvals.jpg",
                   alt: "Redacted Amazon Seller Central screenshots showing approved brand selling applications for Milwaukee, KNIPEX and LEKI",
                   label: "Amazon Brand Approvals",
                   sub: "Milwaukee · KNIPEX · LEKI — seller account",
-                  aspect: "aspect-[902/700]",
+                  width: 902,
+                  height: 700,
                 },
-              ].map((doc) => (
-                <figure key={doc.src} className="overflow-hidden rounded border border-line bg-white">
-                  <div className={`relative ${doc.aspect}`}>
-                    <Image
-                      src={doc.src}
-                      alt={doc.alt}
-                      fill
-                      sizes="(min-width: 1024px) 20vw, 45vw"
-                      className="object-cover"
-                    />
-                  </div>
-                  <figcaption className="border-t border-line px-3 py-2.5">
-                    <p className="text-xs font-bold text-ink">{doc.label}</p>
-                    <p className="mt-0.5 text-[0.68rem] text-muted">{doc.sub}</p>
-                  </figcaption>
-                </figure>
-              ))}
-            </div>
+              ]}
+            />
             <p className="mt-4 text-[0.7rem] leading-relaxed text-faint">
               Redacted for confidentiality. Marketplace screenshots are from
               our own seller applications — approval decisions always rest
